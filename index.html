@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity32="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+    </style>
+</head>
+<body>
+   <!-- Topbar -->
+   <div class="topbar">
+    <div class="topbar-left">
+        <button class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">
+            <img src="./logo1.jpg" alt="Logo">
+        </div>
+    </div>
+    <div class="topbar-options" style="margin-right: 50px;"    >
+        <button class="topbar-btn"><i class="fas fa-headset fa-2x"></i> Support</button>
+        <button class="topbar-btn"><i class="fas fa-cog fa-2x"></i> Setup</button>
+        <i class="fas fa-bell bell-icon fa-2x"></i>
+        <div class="user-profile">
+            <span>TASSCO</span>
+            <i class="fas fa-user-circle fa-2x"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+        <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+        <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+        <li><a href="./generalentryform.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+    </ul>
+</div>
+
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+                              <div style="display: flex; justify-content: flex-end; margin-right:40px" >
+                                  <div style="display: flex; gap: 10px;">
+                                      <div class="dropdown" style="position: relative; display: inline-block;">
+                                          <button onclick="toggleDropdown(this)" style="padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background: linear-gradient(145deg, #3498db, #2980b9); font-size: 14px; color: #fff; transition: all 0.3s ease; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); border: none; cursor: pointer;">
+                                              <i class="fas fa-rocket" style="margin-right: 10px;"></i>Credit Voucher  <i class="fas fa-caret-down" style="margin-left: 5px;"></i>
+                                          </button>
+                                          <div class="dropdown-content" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                                              <a href="./productEntryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Product Entry </a>
+                                              <a href="./GeneralEntryForm.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">General Entry</a>
+                                          </div>
+                                      </div>
+                                      <div class="dropdown" style="position: relative; display: inline-block;">
+                                          <button onclick="toggleDropdown(this)" style="padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background: linear-gradient(145deg, #e74c3c, #c0392b); font-size: 14px; color: #fff; transition: all 0.3s ease; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); border: none; cursor: pointer;">
+                                              <i class="fas fa-star" style="margin-right: 10px;"></i>Debit Voucher<i class="fas fa-caret-down" style="margin-left: 5px;"></i>
+                                          </button>
+                                          <div class="dropdown-content" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+                                              <a href="./productEntryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Product Entry</a>
+                                              <a href="./generalentryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">General Entry</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <script>
+                                  function toggleDropdown(button) {
+                                      var dropdownContent = button.nextElementSibling;
+                                      if (dropdownContent.style.display === "block") {
+                                          dropdownContent.style.display = "none";
+                                      } else {
+                                          dropdownContent.style.display = "block";
+                                      }
+                                  }
+                              </script>
+                              <style>
+button:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+</style>    </div>
+
+    
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            
+            sidebar.classList.toggle('icons-only');
+            mainContent.classList.toggle('sidebar-icons-only');
+        }
+        
+
+        document.querySelectorAll('th').forEach(th => {
+            th.addEventListener('click', function() {
+                document.querySelectorAll('th').forEach(header => {
+                    header.classList.remove('sort-asc', 'sort-desc');
+                });
+                
+                if (this.classList.contains('sort-asc')) {
+                    this.classList.remove('sort-asc');
+                    this.classList.add('sort-desc');
+                } else {
+                    this.classList.remove('sort-desc');
+                    this.classList.add('sort-asc');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

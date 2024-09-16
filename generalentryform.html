@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity32="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <button class="toggle-btn" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <img src="./logo1.jpg" alt="Logo">
+            </div>
+        </div>
+        <div class="topbar-options" style="margin-right: 50px;"    >
+            <button class="topbar-btn"><i class="fas fa-headset fa-2x"></i> Support</button>
+            <button class="topbar-btn"><i class="fas fa-cog fa-2x"></i> Setup</button>
+            <i class="fas fa-bell bell-icon fa-2x"></i>
+            <div class="user-profile">
+                <span>TASSCO</span>
+                <i class="fas fa-user-circle fa-2x"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+            <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+            <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+            <li><a href="./generalentryform.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+            <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+            <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+            <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+        </ul>
+    </div>
+      <!-- Main content -->
+      <div class="main-content" id="mainContent">
+                          
+    
+                            <div class="form-container" style="padding: 20px; margin: 20px;">
+                                <div class="left-side">
+                                    <div class="form-group">
+                                        <label for="voucherNumber">Voucher Number:</label>
+                                        <input type="text" id="voucherNumber" name="voucherNumber" required>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="form-group">
+                                        <label for="date">Date:</label>
+                                        <input type="date" id="date" name="date" class="small-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="invoiceNumber">Invoice Number:</label>
+                                        <input type="text" id="invoiceNumber" name="invoiceNumber" class="small-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="demandId">Demand ID:</label>
+                                        <input type="text" id="demandId" name="demandId" class="small-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cashBookId">Cash Book ID:</label>
+                                        <input type="text" id="cashBookId" name="cashBookId" class="small-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gatePass">Gate Pass:</label>
+                                        <input type="text" id="gatePass" name="gatePass" class="small-input">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="amount">Amount:</label>
+                                        <input type="number" id="amount" name="amount" step="0.01" class="small-input">
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <div class="form-group" style="margin-top: 20px; display: flex; justify-content: center;">
+                              <div style="width: 80%;">
+                                  <label for="accountTitle" style="display: block; margin-bottom: 5px; font-weight: bold;">Account Title:</label>
+                                  <select id="accountTitle" name="accountTitle" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); appearance: none; -webkit-appearance: none; -moz-appearance: none;  background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                      <option value="">Select Account Title</option>
+                                      <option value="cash">Cash</option>
+                                      <option value="bank">Bank</option>
+                                      <option value="accounts_receivable">Accounts Receivable</option>
+                                      <option value="accounts_payable">Accounts Payable</option>
+                                      <option value="inventory">Inventory</option>
+                                      <option value="revenue">Revenue</option>
+                                      <option value="expenses">Expenses</option>
+                                  </select>
+                              </div>
+                            </div>
+                          
+                                  <div class="form-group" style="margin: 20px; display: flex; justify-content: center;">
+                                      <div style="width: 100%;">
+                                          <button id="addRow" style="margin-bottom: 10px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Add Row</button>
+                                          <div class="table-responsive">
+                                              <table id="itemTable" style="width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden;">
+                                                  <thead>
+                                                      <tr>
+                                                          <th>S.No</th>
+                                                          <th>Item Name</th>
+                                                          <th>Packing (kg or litre)</th>
+                                                          <th>Quality</th>
+                                                          <th>R.P</th>
+                                                          <th>Discount</th>
+                                                          <th>Amount</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                      <!-- Rows will be added here dynamically -->
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                      </div>
+                                  </div>
+
+  <script>
+      let rowCount = 0;
+
+      function addRow() {
+          rowCount++;
+          const tbody = document.querySelector("#itemTable tbody");
+          const newRow = document.createElement("tr");
+          newRow.innerHTML = `
+              <td>${rowCount}</td>
+              <td><input type="text" name="itemName_${rowCount}" style="width: 100%;"></td>
+              <td><input type="text" name="packing_${rowCount}" style="width: 100%;"></td>
+              <td><input type="text" name="quality_${rowCount}" style="width: 100%;"></td>
+              <td><input type="number" name="rp_${rowCount}" style="width: 100%;"></td>
+              <td><input type="number" name="discount_${rowCount}" style="width: 100%;"></td>
+              <td><input type="number" name="amount_${rowCount}" style="width: 100%;" readonly></td>
+          `;
+          tbody.appendChild(newRow);
+      }
+
+      document.getElementById("addRow").addEventListener("click", addRow);
+
+      // Add an initial row
+      addRow();
+  </script>
+
+  <style>
+    
+      .form-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          background-color: #f0f8ff;
+          padding: 25px;
+          border-radius: 12px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .left-side {
+          width: 100%;
+          margin-bottom: 20px;
+      }
+      .right-side {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+      .form-group {
+          margin-bottom: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+      }
+      .left-side .form-group {
+          justify-content: flex-start;
+      }
+      .right-side .form-group {
+          width: 100%;
+      }
+      .form-group label {
+          margin-bottom: 5px;
+          font-size: 14px;
+          color: #333;
+          font-weight: 600;
+      }
+      .form-group input {
+          width: 100%;
+          max-width: 100%;
+          padding: 10px;
+          border: 1px solid #bbd8ff;
+          border-radius: 6px;
+          font-size: 14px;
+          transition: all 0.3s ease;
+          background-color: #ffffff;
+      }
+      .form-group input:focus {
+          border-color: #4a90e2;
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
+      }
+      .form-group input[type="date"],
+      .form-group input[type="number"] {
+          padding: 9px 10px;
+      }
+      .table-responsive {
+          overflow-x: auto;
+      }
+      #itemTable {
+          min-width: 600px;
+      }
+      #itemTable th, #itemTable td {
+          padding: 10px;
+          text-align: left;
+      }
+      #itemTable input {
+          width: 100%;
+          padding: 5px;
+      }
+
+      @media (min-width: 768px) {
+          .left-side {
+              width: 28%;
+              margin-bottom: 0;
+          }
+          .right-side {
+              width: 68%;
+          }
+          .right-side .form-group {
+              width: 48%;
+          }
+          .form-group {
+              flex-direction: row;
+              align-items: center;
+          }
+          .form-group label {
+              margin-right: 10px;
+              margin-bottom: 0;
+          }
+      }
+  </style>
+
+
+    
+      </div>
+
+    
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            
+            sidebar.classList.toggle('icons-only');
+            mainContent.classList.toggle('sidebar-icons-only');
+        }
+        
+
+        document.querySelectorAll('th').forEach(th => {
+            th.addEventListener('click', function() {
+         
+                document.querySelectorAll('th').forEach(header => {
+                    header.classList.remove('sort-asc', 'sort-desc');
+                });
+                
+                if (this.classList.contains('sort-asc')) {
+                    this.classList.remove('sort-asc');
+                    this.classList.add('sort-desc');
+                } else {
+                    this.classList.remove('sort-desc');
+                    this.classList.add('sort-asc');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity32="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+    </style>
+</head>
+<body>
+   <!-- Topbar -->
+   <div class="topbar">
+    <div class="topbar-left">
+        <button class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">
+            <img src="./logo1.jpg" alt="Logo">
+        </div>
+    </div>
+    <div class="topbar-options" style="margin-right: 50px;"    >
+        <button class="topbar-btn"><i class="fas fa-headset fa-2x"></i> Support</button>
+        <button class="topbar-btn"><i class="fas fa-cog fa-2x"></i> Setup</button>
+        <i class="fas fa-bell bell-icon fa-2x"></i>
+        <div class="user-profile">
+            <span>TASSCO</span>
+            <i class="fas fa-user-circle fa-2x"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+        <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+        <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+        <li><a href="./generalentryform.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+    </ul>
+</div>
+    <!-- Main content -->
+    <div class="main-content" id="mainContent">
+        <!-- Tickets Section -->
+        <div class="tickets-section">
+            <div class="tickets-header">
+                <h2>Accounts</h2>
+                <a href="./Account.html" class="add-tickets" style="text-decoration: none;">+Add Account</a>
+            </div>
+    
+            <!-- Filters and Search Bar -->
+            <div class="table-controls">
+                <!-- <button class="filter-btn"><i class="fas fa-filter"></i> Filters</button> -->
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+    
+            <!-- Tickets Table -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Number 
+                                <i class="fas fa-sort"></i> <!-- Default sort icon -->
+                            </th>
+                            <th>
+                                Date 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Title 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Contact 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Phone 1 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Phone 2 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                City 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Assigned To 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Status 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Priority 
+                                <i class="fas fa-sort"></i>
+                            </th>
+                            <th>
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="11">No record found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            
+            sidebar.classList.toggle('icons-only');
+            mainContent.classList.toggle('sidebar-icons-only');
+        }
+        
+
+        document.querySelectorAll('th').forEach(th => {
+            th.addEventListener('click', function() {
+                document.querySelectorAll('th').forEach(header => {
+                    header.classList.remove('sort-asc', 'sort-desc');
+                });
+                
+                if (this.classList.contains('sort-asc')) {
+                    this.classList.remove('sort-asc');
+                    this.classList.add('sort-desc');
+                } else {
+                    this.classList.remove('sort-desc');
+                    this.classList.add('sort-asc');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Coming Soon</title>
+      <style>
+          body, html {
+              height: 100%;
+              margin: 0;
+              font-family: Arial, sans-serif;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              color: #ffffff;
+          }
+          .container {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              text-align: center;
+              padding: 0 20px;
+          }
+          h1 {
+              font-size: 5rem;
+              margin-bottom: 20px;
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+          }
+          p {
+              font-size: 2rem;
+              margin-bottom: 30px;
+          }
+          .countdown {
+              font-size: 3rem;
+              margin-bottom: 40px;
+          }
+          .email-form {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 30px;
+          }
+          input[type="email"] {
+              padding: 10px;
+              font-size: 1rem;
+              width: 250px;
+              border: none;
+              border-radius: 5px 0 0 5px;
+          }
+          button {
+              padding: 10px 20px;
+              font-size: 1rem;
+              background-color: #4CAF50;
+              color: white;
+              border: none;
+              border-radius: 0 5px 5px 0;
+              cursor: pointer;
+              transition: background-color 0.3s;
+          }
+          button:hover {
+              background-color: #45a049;
+          }
+          .social-icons {
+              margin-top: 20px;
+          }
+          .social-icons a {
+              color: white;
+              font-size: 1.5rem;
+              margin: 0 10px;
+              text-decoration: none;
+          }
+          @keyframes typewriter {
+              from { width: 0; }
+              to { width: 100%; }
+          }
+          @keyframes blink {
+              50% { border-color: transparent; }
+          }
+          #changingText, #changingSubtext {
+              overflow: hidden;
+              border-right: 3px solid #ffffff;
+              white-space: nowrap;
+              margin: 0 auto;
+              letter-spacing: 0.15em;
+              animation: 
+                  typewriter 3s steps(40, end),
+                  blink 0.75s step-end infinite;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h1 id="changingText">Coming Soon</h1>
+          <p id="changingSubtext">We're working hard to bring you something amazing. Stay tuned!</p>
+      </div>
+
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const texts = ["Coming Soon", "Digipex Solutions", "Contact us for services"];
+              const subtexts = ["We're working hard to bring you something amazing. Stay tuned!", "", "03243688380"];
+              let currentIndex = 0;
+              const headingElement = document.getElementById("changingText");
+              const subtextElement = document.getElementById("changingSubtext");
+
+              function changeText() {
+                  headingElement.style.animation = 'none';
+                  subtextElement.style.animation = 'none';
+                  void headingElement.offsetWidth;
+                  void subtextElement.offsetWidth;
+                  headingElement.textContent = texts[currentIndex];
+                  subtextElement.textContent = subtexts[currentIndex];
+                  headingElement.style.animation = 'typewriter 3s steps(40, end), blink 0.75s step-end infinite';
+                  subtextElement.style.animation = 'typewriter 3s steps(40, end), blink 0.75s step-end infinite';
+                  currentIndex = (currentIndex + 1) % texts.length;
+              }
+
+              // Initial call to set the first text
+              changeText();
+
+              // Set interval to change text every 6 seconds
+              setInterval(changeText, 2000);
+          });
+      </script>
+  </body>
+  </html>
