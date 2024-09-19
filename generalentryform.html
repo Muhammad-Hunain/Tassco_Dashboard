@@ -15,9 +15,9 @@
     <!-- Topbar -->
     <div class="topbar">
         <div class="topbar-left">
-            <button class="toggle-btn" onclick="toggleSidebar()">
+            <a class="toggle-btn" onclick="toggleSidebar()" >
                 <i class="fas fa-bars"></i>
-            </button>
+            </a>
             <div class="logo">
                 <img src="./logo1.jpg" alt="Logo">
             </div>
@@ -33,13 +33,22 @@
         </div>
     </div>
 
+
     <!-- Sidebar -->
+
+
+
+
+
+
+
+
     <div class="sidebar" id="sidebar">
         <ul>
             <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
             <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
             <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
-            <li><a href="./generalentryform.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+                  <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
             <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
             <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
             <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
@@ -48,7 +57,7 @@
       <!-- Main content -->
       <div class="main-content" id="mainContent">
                           
-    
+            <h1 class="page-title">General Entry</h1>
                             <div class="form-container" style="padding: 20px; margin: 20px;">
                                 <div class="left-side">
                                     <div class="form-group">
@@ -85,7 +94,7 @@
                             </div>
                           
                             <div class="form-group" style="margin-top: 20px; display: flex; justify-content: center;">
-                              <div style="width: 80%;">
+                              <div style="width: 96%;">
                                   <label for="accountTitle" style="display: block; margin-bottom: 5px; font-weight: bold;">Account Title:</label>
                                   <select id="accountTitle" name="accountTitle" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); appearance: none; -webkit-appearance: none; -moz-appearance: none;  background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
                                       <option value="">Select Account Title</option>
@@ -102,9 +111,9 @@
                           
                                   <div class="form-group" style="margin: 20px; display: flex; justify-content: center;">
                                       <div style="width: 100%;">
-                                          <button id="addRow" style="margin-bottom: 10px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Add Row</button>
+                                          <button id="addRow" style="margin-bottom: 30px; margin-top:10px;  margin-left: 5px; padding: 10px 20px; background-color: #00AFF0; color: white; border: none; border-radius: 4px; cursor: pointer;">Add Row</button>
                                           <div class="table-responsive">
-                                              <table id="itemTable" style="width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden;">
+                                              <table id="itemTable" style="  margin-left: 5px;  width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden;">
                                                   <thead>
                                                       <tr>
                                                           <th>S.No</th>

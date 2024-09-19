@@ -15,9 +15,9 @@
    <!-- Topbar -->
    <div class="topbar">
     <div class="topbar-left">
-        <button class="toggle-btn" onclick="toggleSidebar()">
+        <a class="toggle-btn" onclick="toggleSidebar()" >
             <i class="fas fa-bars"></i>
-        </button>
+        </a>
         <div class="logo">
             <img src="./logo1.jpg" alt="Logo">
         </div>
@@ -39,29 +39,29 @@
         <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
         <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
         <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
-        <li><a href="./generalentryform.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+              <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
         <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
-        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+       <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
         <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
     </ul>
 </div>
     <!-- Main content -->
-    <div class="main-content" id="mainContent">
+    <div class="main-content" id="mainContent" >
         <!-- Tickets Section -->
         <div class="tickets-section">
             <div class="tickets-header">
-                <h2>Accounts</h2>
-                <a href="./Account.html" class="add-tickets" style="text-decoration: none;">+Add Account</a>
+                <h2 style="margin-left: 13px;">Accounts</h2>
+                <a href="./Account.html" class="add-tickets" style="text-decoration: none;"><i class="fas fa-plus-circle fa-lg"></i> Add Account</a>
             </div>
-    
+
             <!-- Filters and Search Bar -->
             <div class="table-controls">
                 <!-- <button class="filter-btn"><i class="fas fa-filter"></i> Filters</button> -->
                 <input type="text" placeholder="Search..." class="search-bar">
             </div>
-    
+
             <!-- Tickets Table -->
-            <div class="table-container">
+            <div class="table-container" style="margin-left: 10px;"> 
                 <table>
                     <thead>
                         <tr>
@@ -112,7 +112,325 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="11">No record found</td>
+                            <td>001</td>
+                            <td>2023-05-01</td>
+                            <td>Account 1</td>
+                            <td>John Doe</td>
+                            <td>555-1234</td>
+                            <td>555-5678</td>
+                            <td>New York</td>
+                            <td>Alice Smith</td>
+                            <td>Active</td>
+                            <td>High</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2023-05-02</td>
+                            <td>Account 2</td>
+                            <td>Jane Smith</td>
+                            <td>555-2345</td>
+                            <td>555-6789</td>
+                            <td>Los Angeles</td>
+                            <td>Bob Johnson</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-05-03</td>
+                            <td>Account 3</td>
+                            <td>Mike Brown</td>
+                            <td>555-3456</td>
+                            <td>555-7890</td>
+                            <td>Chicago</td>
+                            <td>Carol Davis</td>
+                            <td>Active</td>
+                            <td>Low</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>2023-05-04</td>
+                            <td>Account 4</td>
+                            <td>Sarah Lee</td>
+                            <td>555-4567</td>
+                            <td>555-8901</td>
+                            <td>Houston</td>
+                            <td>David Wilson</td>
+                            <td>Active</td>
+                            <td>High</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>2023-05-05</td>
+                            <td>Account 5</td>
+                            <td>Tom Jones</td>
+                            <td>555-5678</td>
+                            <td>555-9012</td>
+                            <td>Phoenix</td>
+                            <td>Emma Taylor</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>006</td>
+                            <td>2023-05-06</td>
+                            <td>Account 6</td>
+                            <td>Lisa Green</td>
+                            <td>555-6789</td>
+                            <td>555-0123</td>
+                            <td>Philadelphia</td>
+                            <td>Frank Martin</td>
+                            <td>Active</td>
+                            <td>Low</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>007</td>
+                            <td>2023-05-07</td>
+                            <td>Account 7</td>
+                            <td>Chris White</td>
+                            <td>555-7890</td>
+                            <td>555-1234</td>
+                            <td>San Antonio</td>
+                            <td>Grace Lee</td>
+                            <td>Active</td>
+                            <td>High</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>008</td>
+                            <td>2023-05-08</td>
+                            <td>Account 8</td>
+                            <td>Amy Black</td>
+                            <td>555-8901</td>
+                            <td>555-2345</td>
+                            <td>San Diego</td>
+                            <td>Henry Clark</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>009</td>
+                            <td>2023-05-09</td>
+                            <td>Account 9</td>
+                            <td>Mark Brown</td>
+                            <td>555-9012</td>
+                            <td>555-3456</td>
+                            <td>Dallas</td>
+                            <td>Ivy Chen</td>
+                            <td>Active</td>
+                            <td>Low</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>010</td>
+                            <td>2023-05-10</td>
+                            <td>Account 10</td>
+                            <td>Emily Davis</td>
+                            <td>555-0123</td>
+                            <td>555-4567</td>
+                            <td>San Jose</td>
+                            <td>Jack Wilson</td>
+                            <td>Active</td>
+                            <td>High</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>011</td>
+                            <td>2023-05-11</td>
+                            <td>Account 11</td>
+                            <td>Daniel Lee</td>
+                            <td>555-1234</td>
+                            <td>555-5678</td>
+                            <td>Austin</td>
+                            <td>Karen Brown</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>012</td>
+                            <td>2023-05-12</td>
+                            <td>Account 12</td>
+                            <td>Olivia Martin</td>
+                            <td>555-2345</td>
+                            <td>555-6789</td>
+                            <td>Jacksonville</td>
+                            <td>Leo Taylor</td>
+                            <td>Active</td>
+                            <td>Low</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>013</td>
+                            <td>2023-05-13</td>
+                            <td>Account 13</td>
+                            <td>Ryan Wilson</td>
+                            <td>555-3456</td>
+                            <td>555-7890</td>
+                            <td>San Francisco</td>
+                            <td>Mia Johnson</td>
+                            <td>Active</td>
+                            <td>High</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>014</td>
+                            <td>2023-05-14</td>
+                            <td>Account 14</td>
+                            <td>Sophia Clark</td>
+                            <td>555-4567</td>
+                            <td>555-8901</td>
+                            <td>Columbus</td>
+                            <td>Nathan White</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>015</td>
+                            <td>2023-05-15</td>
+                            <td>Account 15</td>
+                            <td>William Taylor</td>
+                            <td>555-5678</td>
+                            <td>555-9012</td>
+                            <td>Fort Worth</td>
+                            <td>Olivia Green</td>
+                            <td>Active</td>
+                            <td>Low</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>016</td>
+                            <td>2023-05-16</td>
+                            <td>Account 16</td>
+                            <td>Ava Anderson</td>
+                            <td>555-6789</td>
+                            <td>555-0123</td>
+                            <td>Charlotte</td>
+                            <td>Peter Brown</td>
+                            <td>Active</td>
+                            <td>High</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>017</td>
+                            <td>2023-05-17</td>
+                            <td>Account 17</td>
+                            <td>James Moore</td>
+                            <td>555-7890</td>
+                            <td>555-1234</td>
+                            <td>Detroit</td>
+                            <td>Quinn Davis</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>018</td>
+                            <td>2023-05-18</td>
+                            <td>Account 18</td>
+                            <td>Isabella Johnson</td>
+                            <td>555-8901</td>
+                            <td>555-2345</td>
+                            <td>El Paso</td>
+                            <td>Robert Lee</td>
+                            <td>Active</td>
+                            <td>Low</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>019</td>
+                            <td>2023-05-19</td>
+                            <td>Account 19</td>
+                            <td>Ethan Brown</td>
+                            <td>555-9012</td>
+                            <td>555-3456</td>
+                            <td>Memphis</td>
+                            <td>Samantha Wilson</td>
+                            <td>Active</td>
+                            <td>High</td>
+  <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                                               </tr>
+                        <tr>
+                            <td>020</td>
+                            <td>2023-05-20</td>
+                            <td>Account 20</td>
+                            <td>Mia Davis</td>
+                            <td>555-0123</td>
+                            <td>555-4567</td>
+                            <td>Boston</td>
+                            <td>Thomas Martin</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+                            <td>
+                                <a class="edit-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-edit"></i></a>
+                                <a class="delete-btn" style="background-color: #00AFF0; color: white; padding: 6px 12px; text-decoration: none; display: inline-block; border-radius: 4px;"><i class="fas fa-trash"></i></a>
+                            </td>
+                       
                         </tr>
                     </tbody>
                 </table>

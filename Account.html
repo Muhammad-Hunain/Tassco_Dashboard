@@ -65,40 +65,39 @@
     </style>
 </head>
 <body>
-     <!-- Topbar -->
-     <div class="topbar">
-        <div class="topbar-left">
-            <button class="toggle-btn" onclick="toggleSidebar()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="logo">
-                <img src="./logo.png" alt="Logo">
-            </div>
-        </div>
-        <div class="topbar-options">
-            <button class="topbar-btn"><i class="fab fa-whatsapp"></i> WhatsApp</button>
-            <button class="topbar-btn"><i class="fas fa-headset"></i> Support</button>
-            <button class="topbar-btn"><i class="fas fa-cog"></i> Setup</button>
-            <i class="fas fa-bell bell-icon"></i>
-            <div class="user-profile">
-                <span>Divine Knots</span>
-                <i class="fas fa-user-circle"></i>
-            </div>
+   <!-- Topbar -->
+   <div class="topbar">
+    <div class="topbar-left">
+        <a class="toggle-btn" onclick="toggleSidebar()" >
+            <i class="fas fa-bars"></i>
+        </a>
+        <div class="logo">
+            <img src="./logo1.jpg" alt="Logo">
         </div>
     </div>
+    <div class="topbar-options" style="margin-right: 50px;"    >
+        <button class="topbar-btn"><i class="fas fa-headset fa-2x"></i> Support</button>
+        <button class="topbar-btn"><i class="fas fa-cog fa-2x"></i> Setup</button>
+        <i class="fas fa-bell bell-icon fa-2x"></i>
+        <div class="user-profile">
+            <span>TASSCO</span>
+            <i class="fas fa-user-circle fa-2x"></i>
+        </div>
+    </div>
+</div>
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
-        <ul>
-            <li><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></li>
-            <li><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></li>
-            <li><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></li>
-            <li><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></li>
-            <li><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></li>
-            <li><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></li>
-            <li><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></li>
-        </ul>
-    </div>
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+        <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+        <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+              <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+       <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+    </ul>
+</div>
 
     <!-- Main content -->
     <div class="main-content" id="mainContent">
@@ -209,7 +208,7 @@
         .form-input:focus {
             border-color: #00AFF0;
             outline: none;
-            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+            box-shadow: 0 0 5px #00AFF0;
         }
         .form-row {
             display: flex;
@@ -254,7 +253,7 @@
             color: white;
         }
         .save-btn:hover {
-            background-color: #45a049;
+            background-color: #00AFF0;
         }
     </style>
 

@@ -15,9 +15,9 @@
    <!-- Topbar -->
    <div class="topbar">
     <div class="topbar-left">
-        <button class="toggle-btn" onclick="toggleSidebar()">
+        <a class="toggle-btn" onclick="toggleSidebar()" >
             <i class="fas fa-bars"></i>
-        </button>
+        </a>
         <div class="logo">
             <img src="./logo1.jpg" alt="Logo">
         </div>
@@ -39,20 +39,21 @@
         <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
         <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
         <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
-        <li><a href="./generalentryform.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+              <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
         <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
-        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+       <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
         <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
     </ul>
 </div>
 
     <!-- Main content -->
-    <div class="main-content" id="mainContent">
+    <div class="main-content" id="mainContent" >
         <!-- Tickets Section -->
         <div class="tickets-section">
             <div class="tickets-header">
-                <h2>Products</h2>
-                <a href="./product.html" class="add-tickets" style="text-decoration: none;">+ Add Product</a>
+                <h2 style="margin-left: 14px;">Products</h2>
+
+                <a href="./product.html" class="add-tickets" style="text-decoration: none;"><i class="fas fa-plus-circle fa-lg"></i> Add Product</a>
             </div>
     
             <!-- Filters and Search Bar -->
@@ -62,13 +63,13 @@
             </div>
     
             <!-- Tickets Table -->
-            <div class="table-container">
+            <div class="table-container" style="margin-left: 14px;">
                 <table>
                     <thead>
                         <tr>
                             <th>
                                 Number 
-                                <i class="fas fa-sort"></i> <!-- Default sort icon -->
+                                <i class="fas fa-sort"></i>
                             </th>
                             <th>
                                 Date 
@@ -113,8 +114,193 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="11">No record found</td>
+                            <td>001</td>
+                            <td>2023-06-01</td>
+                            <td>Product A</td>
+                            <td>John Doe</td>
+                            <td>123-456-7890</td>
+                            <td>987-654-3210</td>
+                            <td>New York</td>
+                            <td>Alice Smith</td>
+                            <td>Active</td>
+                            <td>High</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
                         </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2023-06-02</td>
+                            <td>Product B</td>
+                            <td>Jane Smith</td>
+                            <td>234-567-8901</td>
+                            <td>876-543-2109</td>
+                            <td>Los Angeles</td>
+                            <td>Bob Johnson</td>
+                            <td>Inactive</td>
+                            <td>Medium</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>2023-06-03</td>
+                            <td>Product C</td>
+                            <td>Mike Brown</td>
+                            <td>345-678-9012</td>
+                            <td>765-432-1098</td>
+                            <td>Chicago</td>
+                            <td>Carol White</td>
+                            <td>Active</td>
+                            <td>Low</td>
+                            <td>
+                                <i class="fas fa-eye" title="View" style="color: blue;"></i>
+                                <i class="fas fa-edit" title="Edit" style="color: green;"></i>
+                                <i class="fas fa-trash-alt" title="Delete" style="color: red;"></i>
+                            </td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
