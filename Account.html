@@ -7,63 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity32="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-
-        .form-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-        }
-        .form-group {
-            flex: 0 0 48%;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-        }
-        .checkbox-group input[type="checkbox"] {
-            margin-right: 5px;
-        }
-        .form-buttons {
-            text-align: right;
-            margin-top: 20px;
-        }
-        .form-buttons button {
-            padding: 10px 20px;
-            margin-left: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .refresh-btn {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .save-btn {
-            background-color: #00AFF0;
-            color: white;
-        }
-    </style>
-</head>
+    </head>
 <body>
    <!-- Topbar -->
    <div class="topbar">
@@ -75,16 +19,20 @@
             <img src="./logo1.jpg" alt="Logo">
         </div>
     </div>
-    <div class="topbar-options" style="margin-right: 50px;"    >
-        <button class="topbar-btn"><i class="fas fa-headset fa-2x"></i> Support</button>
-        <button class="topbar-btn"><i class="fas fa-cog fa-2x"></i> Setup</button>
-        <i class="fas fa-bell bell-icon fa-2x"></i>
+    <div class="topbar-center">
+        <div class="search-bar" style="width: 80%; max-width: 800px; margin: 0 auto;">
+            <input type="text" placeholder="Search..." aria-label="Search" style="width: calc(100% - 50px); padding: 12px 15px; border: 2px solid #00AFF0; border-radius: 25px 0 0 25px; outline: none; font-size: 16px; transition: all 0.3s ease;">
+            <button type="submit" style="width: 50px; padding: 12px; background: #00AFF0; border: none; border-radius: 0 25px 25px 0; cursor: pointer; transition: all 0.3s ease;"><i class="fas fa-search" style="color: white; font-size: 18px;"></i></button>
+        </div>
+    </div>
+    <div class="topbar-options" style="margin-right: 50px;">
         <div class="user-profile">
             <span>TASSCO</span>
             <i class="fas fa-user-circle fa-2x"></i>
         </div>
     </div>
 </div>
+
 
 <!-- Sidebar -->
 <div class="sidebar" id="sidebar">
@@ -162,100 +110,8 @@
     </div>
     </div>
 
-    <style>
-        .main-content {
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .form-section {
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .section-title {
-            color: #333;
-            font-size: 24px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #00AFF0;
-            padding-bottom: 10px;
-        }
-        .subsection-title {
-            color: #00AFF0;
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-        .classic-form .form-group {
-            margin-bottom: 20px;
-        }
-        .classic-form label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-            font-weight: bold;
-        }
-        .form-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-        .form-input:focus {
-            border-color: #00AFF0;
-            outline: none;
-            box-shadow: 0 0 5px #00AFF0;
-        }
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-        }
-        .form-row .form-group {
-            flex: 1;
-            margin-right: 15px;
-        }
-        .form-row .form-group:last-child {
-            margin-right: 0;
-        }
-        .checkbox {
-            display: flex;
-            align-items: center;
-        }
-        .checkbox input {
-            margin-right: 10px;
-        }
-        .form-buttons {
-            margin-top: 30px;
-            text-align: right;
-        }
-        .btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .refresh-btn {
-            background-color: #f0f0f0;
-            color: #333;
-            margin-right: 10px;
-        }
-        .refresh-btn:hover {
-            background-color: #e0e0e0;
-        }
-        .save-btn {
-            background-color: #00AFF0;
-            color: white;
-        }
-        .save-btn:hover {
-            background-color: #00AFF0;
-        }
-    </style>
+   
+   
 
     <script>
         function toggleSidebar() {

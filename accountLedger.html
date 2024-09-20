@@ -12,26 +12,29 @@
     </style>
 </head>
 <body>
-      <!-- Topbar -->
-      <div class="topbar">
-        <div class="topbar-left">
-            <a class="toggle-btn" onclick="toggleSidebar()" >
-                <i class="fas fa-bars"></i>
-            </a>
-            <div class="logo">
-                <img src="./logo1.jpg" alt="Logo">
-            </div>
-        </div>
-        <div class="topbar-options" style="margin-right: 50px;"    >
-            <button class="topbar-btn"><i class="fas fa-headset fa-2x"></i> Support</button>
-            <button class="topbar-btn"><i class="fas fa-cog fa-2x"></i> Setup</button>
-            <i class="fas fa-bell bell-icon fa-2x"></i>
-            <div class="user-profile">
-                <span>TASSCO</span>
-                <i class="fas fa-user-circle fa-2x"></i>
-            </div>
+       <!-- Topbar -->
+   <div class="topbar">
+    <div class="topbar-left">
+        <a class="toggle-btn" onclick="toggleSidebar()" >
+            <i class="fas fa-bars"></i>
+        </a>
+        <div class="logo">
+            <img src="./logo1.jpg" alt="Logo">
         </div>
     </div>
+    <div class="topbar-center">
+        <div class="search-bar" style="width: 80%; max-width: 800px; margin: 0 auto;">
+            <input type="text" placeholder="Search..." aria-label="Search" style="width: calc(100% - 50px); padding: 12px 15px; border: 2px solid #00AFF0; border-radius: 25px 0 0 25px; outline: none; font-size: 16px; transition: all 0.3s ease;">
+            <button type="submit" style="width: 50px; padding: 12px; background: #00AFF0; border: none; border-radius: 0 25px 25px 0; cursor: pointer; transition: all 0.3s ease;"><i class="fas fa-search" style="color: white; font-size: 18px;"></i></button>
+        </div>
+    </div>
+    <div class="topbar-options" style="margin-right: 50px;">
+        <div class="user-profile">
+            <span>TASSCO</span>
+            <i class="fas fa-user-circle fa-2x"></i>
+        </div>
+    </div>
+</div>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
