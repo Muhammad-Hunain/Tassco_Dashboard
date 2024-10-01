@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signin-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            width: 400px;
+            backdrop-filter: blur(10px);
+        }
+        h2 {
+            text-align: center;
+            color: #1a1a1a;
+            font-size: 2.2rem;
+            margin-bottom: 0.1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        input {
+            padding: 1rem;
+            margin-top: 0.75rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: border-color 0.3s ease;
+        }
+        input:focus {
+            outline: none;
+            border-color: #2193b0;
+            box-shadow: 0 0 0 3px rgba(33, 147, 176, 0.25);
+        }
+        .button {
+            margin-top: 2.25rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+        }
+        .button:hover {
+            background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+        }
+        .button:active {
+            transform: scale(0.98);
+        }
+        .company-logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .company-logo img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 12px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <div class="company-logo">
+            <img src="./logo1.png" alt="Company Logo">
+        </div>
+
+        <h2>Sign In</h2>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+    <div style="display: flex; justify-content: space-between;">
+        <a href="./sigIn.html" class="button" type="submit" style="flex: 1; margin-right: 15px; white-space: nowrap;">Sign In</a>
+        <a href="./signUp.html" class="button" type="button" style="flex: 1; margin-left: 15px; white-space: nowrap;">Create an Account</a>
+    </div>
+</form>
+    </div>
+</body>
+</html>

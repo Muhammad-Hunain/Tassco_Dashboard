@@ -19,7 +19,7 @@
             <i class="fas fa-bars"></i>
         </a>
         <div class="logo">
-            <img src="./logo1.jpg" alt="Logo">
+            <img src="./logo1.png" alt="Logo">
         </div>
     </div>
     <div class="topbar-center">
@@ -60,10 +60,13 @@
             </div>
     
             <!-- Filters and Search Bar -->
-            <div class="table-controls">
-                <!-- <button class="filter-btn"><i class="fas fa-filter"></i> Filters</button> -->
-                <input type="text" placeholder="Search..." class="search-bar">
+            <div class="search-container" style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <div class="search-bar" style="width: 80%; max-width: 600px;">
+                    <input type="text" id="ledgerSearch" placeholder="Search in Product..." aria-label="Search General Ledger" style="width: calc(100% - 50px); padding: 12px 15px; border: 2px solid #00AFF0; border-radius: 25px 0 0 25px; outline: none; font-size: 16px; transition: all 0.3s ease;">
+                    <button type="button" onclick="searchLedger()" style="width: 50px; padding: 12px; background: #00AFF0; border: none; border-radius: 0 25px 25px 0; cursor: pointer; transition: all 0.3s ease;"><i class="fas fa-search" style="color: white; font-size: 18px;"></i></button>
+                </div>
             </div>
+            
     
             <!-- Tickets Table -->
             <div class="table-container" style="margin-left: 14px;">
@@ -71,48 +74,43 @@
                     <thead>
                         <tr>
                             <th>
-                                Number 
+                                Product Name 
                                 <i class="fas fa-sort"></i>
                             </th>
                             <th>
-                                Date 
+                                Packing Type
                                 <i class="fas fa-sort"></i>
                             </th>
                             <th>
-                                Title 
+                               Quantity
                                 <i class="fas fa-sort"></i>
                             </th>
                             <th>
-                                Contact 
+                                R.P. 
                                 <i class="fas fa-sort"></i>
                             </th>
                             <th>
-                                Phone 1 
+                                TSO
+                                <i class="fas fa-sort"></i>
+                            </th>
+                           
+                            <th>
+                                Discount
                                 <i class="fas fa-sort"></i>
                             </th>
                             <th>
-                                Phone 2 
+                                Amount
                                 <i class="fas fa-sort"></i>
                             </th>
                             <th>
-                                City 
-                                <i class="fas fa-sort"></i>
-                            </th>
-                            <th>
-                                Assigned To 
-                                <i class="fas fa-sort"></i>
-                            </th>
-                            <th>
-                                Status 
-                                <i class="fas fa-sort"></i>
-                            </th>
-                            <th>
-                                Priority 
+                                Net Amount
                                 <i class="fas fa-sort"></i>
                             </th>
                             <th>
                                 Action
+                                <i class="fas fa-sort"></i>
                             </th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -125,8 +123,8 @@
                             <td>987-654-3210</td>
                             <td>New York</td>
                             <td>Alice Smith</td>
-                            <td>Active</td>
-                            <td>High</td>
+                          
+                           
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -142,8 +140,8 @@
                             <td>876-543-2109</td>
                             <td>Los Angeles</td>
                             <td>Bob Johnson</td>
-                            <td>Inactive</td>
-                            <td>Medium</td>
+                           
+                     
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -159,8 +157,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                           
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -176,8 +174,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                          
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -193,8 +191,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                          
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -210,8 +208,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                           
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -227,8 +225,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                            
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -244,8 +242,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                           
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -261,8 +259,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                           
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -278,8 +276,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                           
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>
@@ -295,8 +293,8 @@
                             <td>765-432-1098</td>
                             <td>Chicago</td>
                             <td>Carol White</td>
-                            <td>Active</td>
-                            <td>Low</td>
+                          
+                            
                             <td>
                                 <i class="fas fa-eye" title="View" style="color: blue;"></i>
                                 <i class="fas fa-edit" title="Edit" style="color: green;"></i>

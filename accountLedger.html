@@ -19,7 +19,7 @@
             <i class="fas fa-bars"></i>
         </a>
         <div class="logo">
-            <img src="./logo1.jpg" alt="Logo">
+            <img src="./logo1.png" alt="Logo">
         </div>
     </div>
     <div class="topbar-center">
@@ -54,6 +54,40 @@
         <h1 class="page-title" style="text-align: center;">General Ledger</h1>
 
 
+
+<div class="search-container" style="display: flex; justify-content: center; margin-bottom: 20px;">
+    <div class="search-bar" style="width: 80%; max-width: 600px;">
+        <input type="text" id="ledgerSearch" placeholder="Search in General Ledger..." aria-label="Search General Ledger" style="width: calc(100% - 50px); padding: 12px 15px; border: 2px solid #00AFF0; border-radius: 25px 0 0 25px; outline: none; font-size: 16px; transition: all 0.3s ease;">
+        <button type="button" onclick="searchLedger()" style="width: 50px; padding: 12px; background: #00AFF0; border: none; border-radius: 0 25px 25px 0; cursor: pointer; transition: all 0.3s ease;"><i class="fas fa-search" style="color: white; font-size: 18px;"></i></button>
+    </div>
+</div>
+
+<script>
+function searchLedger() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("ledgerSearch");
+    filter = input.value.toUpperCase();
+    table = document.querySelector(".table");
+    tr = table.getElementsByTagName("tr");
+
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (var j = 0; j < td.length; j++) {
+            if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                    break;
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+}
+</script>
+
+        
 
 
                                   <div class="date-range-container" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 20px; background-color: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">

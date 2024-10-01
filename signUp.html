@@ -1,0 +1,145 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign Up</title>
+      <style>
+          body {
+              font-family: 'Poppins', sans-serif;
+              background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              margin: 0;
+          }
+          .form-container {
+              background-color: rgba(255, 255, 255, 0.95);
+              padding: 3rem;
+              border-radius: 20px;
+              box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+              width: 100%;
+              max-width: 480px;
+              transition: transform 0.3s ease;
+          }
+          .form-container:hover {
+              transform: translateY(-5px);
+          }
+          .logo {
+              text-align: center;
+              margin-bottom: 2rem;
+          }
+          .logo img {
+              max-width: 140px;
+              height: auto;
+              border-radius: 10%;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          }
+          h2 {
+              text-align: center;
+              color: #333;
+              font-size: 2.2rem;
+              margin-bottom: 2rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+          }
+          .form-group {
+              margin-bottom: 1.5rem;
+          }
+          label {
+              display: block;
+              margin-bottom: 0.5rem;
+              color: #555;
+              font-weight: 600;
+              font-size: 0.9rem;
+              text-transform: uppercase;
+          }
+          input[type="text"],
+          input[type="email"],
+          input[type="password"] {
+              width: 100%;
+              padding: 0.9rem;
+              border: 2px solid #ddd;
+              border-radius: 10px;
+              font-size: 1rem;
+              transition: all 0.3s ease;
+          }
+          input[type="text"]:focus,
+          input[type="email"]:focus,
+          input[type="password"]:focus {
+              outline: none;
+              border-color: #6dd5ed;
+              box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+          }
+          .checkbox-group {
+              display: flex;
+              align-items: center;
+              margin-bottom: 1.5rem;
+          }
+          input[type="checkbox"] {
+              margin-right: 0.8rem;
+              transform: scale(1.2);
+          }
+          .button {
+              width: 100%;
+              padding: 1rem;
+              background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+              color: #fff;
+              border: none;
+              border-radius: 10px;
+              font-size: 1.1rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              text-align: center;
+              text-decoration: none;
+          }
+          .button:hover {
+            background: linear-gradient(135deg, #6dd5ed 0%, #2193b0 100%);
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          }
+      </style>
+  </head>
+  <body>
+      <div class="form-container">
+          <div class="logo">
+              <img src="./logo1.png" alt="Logo">
+          </div>
+          <h2>Join Us Today</h2>
+          <form>
+              <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" required>
+              </div>
+              <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" required>
+              </div>
+              <div class="form-group">
+                  <label for="userName">Username</label>
+                  <input type="text" id="userName" name="userName" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" required>
+              </div>
+              <div class="checkbox-group">
+                  <input type="checkbox" id="isActive" name="isActive">
+                  <label for="isActive">Activate account immediately</label>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <a href="./sigIn.html" class="button" type="submit" style="flex: 1; margin-right: 10px; white-space: nowrap;">Sign In</a>
+                <a href="./signUp.html" class="button" type="button" style="flex: 1; margin-left: 10px; white-space: nowrap;">Create an Account</a>
+            </div>
+          </form>
+      </div>
+  </body>
+  </html>

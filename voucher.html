@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity32="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Topbar -->
+   <div class="topbar">
+    <div class="topbar-left">
+        <a class="toggle-btn" onclick="toggleSidebar()" >
+            <i class="fas fa-bars"></i>
+        </a>
+        <div class="logo">
+            <img src="./logo1.png" alt="Logo">
+        </div>
+    </div>
+    <div class="topbar-center">
+        <div class="search-bar" style="width: 80%; max-width: 800px; margin: 0 auto;">
+            <input type="text" placeholder="Search..." aria-label="Search" style="width: calc(100% - 50px); padding: 12px 15px; border: 2px solid #00AFF0; border-radius: 25px 0 0 25px; outline: none; font-size: 16px; transition: all 0.3s ease;">
+            <button type="submit" style="width: 50px; padding: 12px; background: #00AFF0; border: none; border-radius: 0 25px 25px 0; cursor: pointer; transition: all 0.3s ease;"><i class="fas fa-search" style="color: white; font-size: 18px;"></i></button>
+        </div>
+    </div>
+    <div class="topbar-options" style="margin-right: 50px;">
+        <div class="user-profile">
+            <span>TASSCO</span>
+            <i class="fas fa-user-circle fa-2x"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+        <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+        <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+        <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+        <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+    </ul>
+</div>
+
+    <!-- Main content -->
+    
+        <div id="mainContent" class="main-content">
+            <h2>Voucher Table</h2>
+            <table class="voucher-table">
+                <thead>
+                    <tr>
+                        <th>Invoice</th>
+                        <th>Voucher</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Demand</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INV-001</td>
+                        <td>VCH-001</td>
+                        <td>John Doe</td>
+                        <td>2023-05-01</td>
+                        <td>Office Supplies</td>
+                        <td>$250.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-002</td>
+                        <td>VCH-002</td>
+                        <td>Jane Smith</td>
+                        <td>2023-05-03</td>
+                        <td>IT Equipment</td>
+                        <td>$1,500.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-003</td>
+                        <td>VCH-003</td>
+                        <td>Robert Johnson</td>
+                        <td>2023-05-05</td>
+                        <td>Travel Expenses</td>
+                        <td>$750.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-004</td>
+                        <td>VCH-004</td>
+                        <td>Emily Brown</td>
+                        <td>2023-05-07</td>
+                        <td>Marketing Materials</td>
+                        <td>$500.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-005</td>
+                        <td>VCH-005</td>
+                        <td>Michael Wilson</td>
+                        <td>2023-05-10</td>
+                        <td>Consulting Services</td>
+                        <td>$2,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-006</td>
+                        <td>VCH-006</td>
+                        <td>Sarah Davis</td>
+                        <td>2023-05-12</td>
+                        <td>Software Licenses</td>
+                        <td>$1,200.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-007</td>
+                        <td>VCH-007</td>
+                        <td>David Lee</td>
+                        <td>2023-05-15</td>
+                        <td>Training Materials</td>
+                        <td>$300.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-008</td>
+                        <td>VCH-008</td>
+                        <td>Lisa Taylor</td>
+                        <td>2023-05-18</td>
+                        <td>Office Furniture</td>
+                        <td>$3,500.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-009</td>
+                        <td>VCH-009</td>
+                        <td>James Anderson</td>
+                        <td>2023-05-20</td>
+                        <td>Maintenance Services</td>
+                        <td>$800.00</td>
+                    </tr>
+                    <tr>
+                        <td>INV-010</td>
+                        <td>VCH-010</td>
+                        <td>Patricia Martinez</td>
+                        <td>2023-05-22</td>
+                        <td>Client Entertainment</td>
+                        <td>$450.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <style>
+            .voucher-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            .voucher-table th, .voucher-table td {
+                border: 1px solid #ddd;
+                padding: 12px;
+                text-align: left;
+            }
+            .voucher-table th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+            .voucher-table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .voucher-table tr:hover {
+                background-color: #f5f5f5;
+            }
+        </style>
+    
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('mainContent');
+            
+            sidebar.classList.toggle('icons-only');
+            mainContent.classList.toggle('sidebar-icons-only');
+        }
+        
+
+        document.querySelectorAll('th').forEach(th => {
+            th.addEventListener('click', function() {
+                document.querySelectorAll('th').forEach(header => {
+                    header.classList.remove('sort-asc', 'sort-desc');
+                });
+                
+                if (this.classList.contains('sort-asc')) {
+                    this.classList.remove('sort-asc');
+                    this.classList.add('sort-desc');
+                } else {
+                    this.classList.remove('sort-desc');
+                    this.classList.add('sort-asc');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
