@@ -29,9 +29,49 @@
         </div>
     </div>
     <div class="topbar-options" style="margin-right: 50px;">
-        <div class="user-profile">
-            <span>TASSCO</span>
-            <i class="fas fa-user-circle fa-2x"></i>
+      <div class="user-profile">
+            <div class="user-profile-container">
+                <div class="profile-header">
+                    <span class="user-name">TASSCO</span>
+                    <div class="profile-icon">
+                        <i class="fas fa-user-circle fa-2x"></i>
+                    </div>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="dropdown-content">
+                        <a href="#profile">Profile</a>
+                        <a href="#settings">Settings</a>
+                        <a href="./sigIn.html">Logout</a>
+                    </div>
+                </div>
+                <style>
+                    .profile-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .user-profile-container:hover .dropdown-content {
+                        display: block;
+                    }
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                    }
+                    .dropdown-content a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                    .dropdown-content a:hover {
+                        background-color: #f1f1f1;
+                    }
+                </style>
+            </div>
         </div>
     </div>
 </div>
@@ -45,7 +85,7 @@
               <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
         <li><a href="./voucher.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
        <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
-        <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+         <li><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
     </ul>
 </div>
     <!-- Main content -->
