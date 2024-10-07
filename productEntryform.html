@@ -19,16 +19,12 @@
                 <i class="fas fa-bars"></i>
             </a>
             <div class="logo">
-                <img src="./logo1.png" alt="Logo">
+                <img src="./TC-Logo.png" alt="Logo">
             </div>
         </div>
-        <div class="topbar-center">
-            <div class="search-bar" style="width: 80%; max-width: 800px; margin: 0 auto;">
-                <input type="text" placeholder="Search..." aria-label="Search" style="width: calc(100% - 50px); padding: 12px 15px; border: 2px solid #00AFF0; border-radius: 25px 0 0 25px; outline: none; font-size: 16px; transition: all 0.3s ease;">
-                <button type="submit" style="width: 50px; padding: 12px; background: #00AFF0; border: none; border-radius: 0 25px 25px 0; cursor: pointer; transition: all 0.3s ease;"><i class="fas fa-search" style="color: white; font-size: 18px;"></i></button>
-            </div>
-        </div>
-        <div class="topbar-options" style="margin-right: 50px;">
+        <div class="topbar-options" style="margin-right: 50px;"    >
+
+            
             <div class="user-profile">
                 <span>TASSCO</span>
                 <i class="fas fa-user-circle fa-2x"></i>
@@ -36,7 +32,16 @@
         </div>
     </div>
 
+
     <!-- Sidebar -->
+
+
+
+
+
+
+
+
     <div class="sidebar" id="sidebar">
         <ul>
             <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
@@ -44,15 +49,14 @@
             <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
                   <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
             <li><a href="./voucher.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
-           <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+            <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
              <li><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
         </ul>
     </div>
       <!-- Main content -->
       <div class="main-content" id="mainContent">
                           
-        <h1 class="page-title" style="text-align: center; margin-left:10px;">Product Entry</h1>
-    
+            <h1 class="page-title" style="text-align: center;">Product Entry</h1>
                             <div class="form-container" style="padding: 20px; margin: 20px;">
                                 <div class="left-side">
                                     <div class="form-group">
@@ -77,19 +81,16 @@
                                         <label for="cashBookId">Cash Book ID:</label>
                                         <input type="text" id="cashBookId" name="cashBookId" class="small-input">
                                     </div>
-                                    <div class="form-group">`
+                                    <div class="form-group">
                                         <label for="gatePass">Gate Pass:</label>
                                         <input type="text" id="gatePass" name="gatePass" class="small-input">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="amount">Amount:</label>
-                                        <input type="number" id="amount" name="amount" step="0.01" class="small-input">
-                                    </div>
+                                    
                                 </div>
                             </div>
                           
-                            <div class="form-group" style="margin-top: 20px; display: flex; justify-content: center;">
-                              <div style="width: 96%;">
+                            <div class="form-group" style="margin-top: 20px;  display: flex; justify-content: center;">
+                              <div style="width: 69%;">
                                   <label for="accountTitle" style="display: block; margin-bottom: 5px; font-weight: bold;">Account Title:</label>
                                   <select id="accountTitle" name="accountTitle" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); appearance: none; -webkit-appearance: none; -moz-appearance: none;  background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
                                       <option value="">Select Account Title</option>
@@ -102,13 +103,22 @@
                                       <option value="expenses">Expenses</option>
                                   </select>
                               </div>
+
+                              
+                                                            <div style="width: 25%; margin-left: 2%;">
+                                                                <label for="amount" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount:</label>
+                                                                <input type="number" id="amount" name="amount" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                                            </div>
+                              
+
+
                             </div>
                           
                                   <div class="form-group" style="margin: 20px; display: flex; justify-content: center;">
                                       <div style="width: 100%;">
-                                          <button id="addRow" style="margin-left:5px; margin-bottom: 20px; margin-top:20px; padding: 10px 20px; background-color: #00AFF0; color: white; border: none; border-radius: 4px; cursor: pointer;">Add Row</button>
+                                          <button id="addRow" style="margin-bottom: 30px; margin-top:10px;  margin-left: 15px; padding: 10px 20px; background-color: #00AFF0; color: white; border: none; border-radius: 4px; cursor: pointer;">Add Row</button>
                                           <div class="table-responsive">
-                                              <table id="itemTable" style=" margin-left:5px; width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden;">
+                                              <table id="itemTable" style="  margin-left: 5px;  width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden;">
                                                   <thead>
                                                       <tr>
                                                           <th>S.No</th>
@@ -123,11 +133,17 @@
                                                   <tbody>
                                                       <!-- Rows will be added here dynamically -->
                                                   </tbody>
+                                                  <tfoot>
+                                                      <tr>
+                                                          <td colspan="6" style="text-align: right; font-weight: bold;">Total:</td>
+                                                          <td id="totalAmount" style="font-weight: bold;"></td>
+                                                      </tr>
+                                                  </tfoot>
                                               </table>
                                           </div>
+                                          <button id="saveButton" style="margin-top: 20px; margin-left: auto; margin-right: 15px; padding: 10px 20px; background-color: #00AFF0; color: white; border: none; border-radius: 4px; cursor: pointer; display: block;">Save</button>
                                       </div>
                                   </div>
-
   <script>
       let rowCount = 0;
 
@@ -137,21 +153,32 @@
           const newRow = document.createElement("tr");
           newRow.innerHTML = `
               <td>${rowCount}</td>
-              <td>
-                  <select name="itemName_${rowCount}" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; background-color: #fff; font-size: 14px;">
-                      <option value="">Select Item</option>
-                      <option value="item1">Item 1</option>
-                      <option value="item2">Item 2</option>
-                      <option value="item3">Item 3</option>
-                  </select>
-              </td>
+              <td><input type="text" name="itemName_${rowCount}" style="width: 100%;"></td>
               <td><input type="text" name="packing_${rowCount}" style="width: 100%;"></td>
               <td><input type="text" name="quality_${rowCount}" style="width: 100%;"></td>
-              <td><input type="number" name="rp_${rowCount}" style="width: 100%;"></td>
-              <td><input type="number" name="discount_${rowCount}" style="width: 100%;"></td>
+              <td><input type="number" name="rp_${rowCount}" style="width: 100%;" oninput="calculateAmount(${rowCount})"></td>
+              <td><input type="number" name="discount_${rowCount}" style="width: 100%;" oninput="calculateAmount(${rowCount})"></td>
               <td><input type="number" name="amount_${rowCount}" style="width: 100%;" readonly></td>
           `;
           tbody.appendChild(newRow);
+          calculateTotal();
+      }
+
+      function calculateAmount(row) {
+          const rp = parseFloat(document.querySelector(`input[name="rp_${row}"]`).value) || 0;
+          const discount = parseFloat(document.querySelector(`input[name="discount_${row}"]`).value) || 0;
+          const amount = rp - discount;
+          document.querySelector(`input[name="amount_${row}"]`).value = amount.toFixed(2);
+          calculateTotal();
+      }
+
+      function calculateTotal() {
+          const amounts = document.querySelectorAll('input[name^="amount_"]');
+          let total = 0;
+          amounts.forEach(input => {
+              total += parseFloat(input.value) || 0;
+          });
+          document.getElementById('totalAmount').textContent = total.toFixed(2);
       }
 
       document.getElementById("addRow").addEventListener("click", addRow);
@@ -159,6 +186,7 @@
       // Add an initial row
       addRow();
   </script>
+
   <style>
     
       .form-container {

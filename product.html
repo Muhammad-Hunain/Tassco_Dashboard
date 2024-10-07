@@ -72,7 +72,7 @@
             <i class="fas fa-bars"></i>
         </a>
         <div class="logo">
-            <img src="./logo1.png" alt="Logo">
+                <img src="./TC-Logo.png" alt="Logo">
         </div>
     </div>
     <div class="topbar-options" style="margin-right: 50px;"    >
@@ -151,9 +151,9 @@
                         <input type="text" id="productName" name="productName" placeholder="Enter Product Name" class="form-input">
                     </div>
                     <div class="form-group" style="margin-left: 20px;">
-                        <label for="weightType">Weight Type</label>
-                        <select id="weightType" name="weightType" class="form-input">
-                            <option value="">Select Weight Type</option>
+                        <label for="PackingType">Packing Type</label>
+                        <select id="PackingType" name="PackingType" class="form-input">
+                            <option value="">Select Packing Type</option>
                             <option value="kg">Kilogram</option>
                             <option value="g">Gram</option>
                             <option value="lb">Pound</option>
@@ -167,15 +167,22 @@
                         <input type="number" id="qty" name="qty" placeholder="Enter Quantity" class="form-input">
                     </div>
                     <div class="form-group" style="margin-left: 20px;">
-                        <label for="rate">Rate</label>
-                        <input type="number" id="rate" name="rate" placeholder="Enter Rate" class="form-input">
+                        <label for="Retail Price">Retail Price</label>
+                        <input type="number" id="Retail Price" name="Retail Price" placeholder="Enter Retail Price" class="form-input">
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
                         <label for="discount">Discount</label>
-                        <input type="number" id="discount" name="discount" placeholder="Enter Discount" class="form-input">
+                        <select id="discount" name="discount" class="form-input">
+                            <option value="">Select Discount</option>
+                            <option value="0">0%</option>
+                            <option value="5">5%</option>
+                            <option value="10">10%</option>
+                            <option value="15">15%</option>
+                            <option value="20">20%</option>
+                        </select>
                     </div>
                     <div class="form-group" style="margin-left: 20px;">
                         <label for="typeOfQty">Type of QTY</label>
@@ -188,13 +195,13 @@
                     </div>
                 </div>
                 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="retailPrice">Retail Price</label>
                     <input type="number" id="retailPrice" name="retailPrice" placeholder="Enter Retail Price" class="form-input">
-                </div>
+                </div> -->
                 
                 <div class="form-buttons">
-                    <button type="button" class="btn refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                    <button type="button" class="btn refresh-btn"><i class="fas fa-cancel"></i> Cancel</button>
                     <button type="submit" class="btn save-btn"><i class="fas fa-save"></i> Save</button>
                 </div>
             </form>

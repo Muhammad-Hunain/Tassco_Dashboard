@@ -16,7 +16,7 @@
             <i class="fas fa-bars"></i>
         </a>
         <div class="logo">
-            <img src="./logo1.png" alt="Logo">
+                <img src="./TC-Logo.png" alt="Logo">
         </div>
     </div>
     <div class="topbar-center">
@@ -96,21 +96,25 @@
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="BusinessName">Account Type</label>
-                        <input type="text" id="BusinessName" name="BusinessName" placeholder="Enter Business Name" class="form-input">
+                        <label for="customerName">Customer Name</label>
+                        <input type="text" id="customerName" name="customerName" placeholder="Enter customer name" class="form-input">
                     </div>
                     <div class="form-group" style="margin-left: 20px;">
-                    <label for="accountType">Account Type</label>
-                    <input type="text" id="accountType" name="accountType" placeholder="Enter account type" class="form-input">
+                    <label for="businessName">Business Name</label>
+                    <input type="text" id="businessName" name="businessName" placeholder="Enter business name" class="form-input">
                 </div>
             </div>
                 
-                <h3 class="subsection-title">Account Details</h3>
-                
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter Account name" class="form-input">
+                        <label for="accountType">Account Type</label>
+                        <select id="accountType" name="accountType" class="form-input">
+                            <option value="">Select account type</option>
+                            <option value="savings">Savings</option>
+                            <option value="checking">Checking</option>
+                            <option value="credit">Credit</option>
+                            <option value="investment">Investment</option>
+                        </select>
                     </div>
                     
                     <div class="form-group" style="margin-left: 20px;">
@@ -125,12 +129,16 @@
                         <input type="text" id="city" name="city" placeholder="Enter city" class="form-input">
                     </div>
                     <div class="form-group" style="margin-left: 10px;">
-                        <label for="TSO">TSO</label>
-                        <input type="text" id="TSO" name="TSO" placeholder="Enter TSO" class="form-input">
+                        <label for="tso">TSO</label>
+                        <input type="text" id="tso" name="tso" placeholder="Enter TSO" class="form-input">
                     </div>
                     <div class="form-group" style="margin-left: 10px;">
-                        <label for="Discount Applicable">Discount Applicable</label>
-                        <input type="text" id="Discount Applicable" name="Discount Applicable" placeholder="Enter Discount Applicable" class="form-input">
+                        <label for="discountApplicable">Discount Applicable</label>
+                        <select id="discountApplicable" name="discountApplicable" class="form-input">
+                            <option value="">Select discount applicable</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
                     </div>
                     
                     
@@ -142,7 +150,7 @@
                 </div>
                 
                 <div class="form-buttons">
-                    <button type="button" class="btn refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                    <button type="button" class="btn refresh-btn"><i class="fas fa-cancel"></i> Cancel</button>
                     <button type="submit" class="btn save-btn"><i class="fas fa-save"></i> Save</button>
                 </div>
             </form>

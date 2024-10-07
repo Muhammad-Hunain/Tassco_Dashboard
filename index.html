@@ -19,7 +19,7 @@
             <i class="fas fa-bars"></i>
         </a>
         <div class="logo">
-            <img src="./logo1.png" alt="Logo">
+            <img src="./TC-Logo.png" alt="Logo">
         </div>
     </div>
     <div class="topbar-center">
@@ -28,7 +28,7 @@
             <button type="submit" style="width: 50px; padding: 12px; background: #00AFF0; border: none; border-radius: 0 25px 25px 0; cursor: pointer; transition: all 0.3s ease;"><i class="fas fa-search" style="color: white; font-size: 18px;"></i></button>
         </div>
     </div>
-    <div class="topbar-options" style="margin-right: 50px;">
+    <div class="topbar-options" style="margin-right: 50px; position: relative; z-index: 1002;">
       <div class="user-profile">
             <div class="user-profile-container">
                 <div class="profile-header">
@@ -49,9 +49,10 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        cursor: pointer;
                     }
-                    .user-profile-container:hover .dropdown-content {
-                        display: block;
+                    .user-profile-container {
+                        position: relative;
                     }
                     .dropdown-content {
                         display: none;
@@ -59,7 +60,9 @@
                         background-color: #f9f9f9;
                         min-width: 160px;
                         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                        z-index: 1;
+                        z-index: 1002;
+                        right: 0;
+                        top: 100%;
                     }
                     .dropdown-content a {
                         color: black;
@@ -93,22 +96,25 @@
     <div class="main-content" id="mainContent">
         <div style="display: flex; justify-content: flex-end; margin-right:40px">
             <div style="display: flex; gap: 10px;">
+                
+                <div class="dropdown" style="position: relative;  display: inline-block;">
+                    <button onclick="toggleDropdown('debitDropdown')" style="padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background: linear-gradient(145deg, #3498db, #2980b9); font-size: 14px; color: #fff; transition: all 0.3s ease; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); border: none; cursor: pointer;">
+                        <i class="fas fa-dollar-sign" style="margin-right: 10px;"></i>Debit Voucher  <i class="fas fa-caret-down" style="margin-left: 5px;"></i>
+                    </button>
+                    <div id="debitDropdown" class="dropdown-content" style="display: none; position: absolute; z-index: 999; background-color: #f9f9f9; min-width: 145px; margin-top:5px !important; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); border-radius: 10px;">
+                        <a href="./generalentryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">General Entry</a>
+
+                        <a href="./productEntryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Product Entry</a>
+                    </div>
+                </div>
+
                 <div class="dropdown" style="position: relative; display: inline-block;">
                     <button onclick="toggleDropdown('creditDropdown')" style="padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background: linear-gradient(145deg, #3498db, #2980b9); font-size: 14px; color: #fff; transition: all 0.3s ease; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); border: none; cursor: pointer;">
                         <i class="fas fa-dollar-sign" style="margin-right: 10px;"></i>Credit Voucher  <i class="fas fa-caret-down" style="margin-left: 5px;"></i>
                     </button>
-                    <div id="creditDropdown" class="dropdown-content" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
-                        <a href="./productEntryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Product Entry </a>
-                        <a href="./GeneralEntryForm.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">General Entry</a>
-                    </div>
-                </div>
-                <div class="dropdown" style="position: relative; display: inline-block;">
-                    <button onclick="toggleDropdown('debitDropdown')" style="padding: 10px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); background: linear-gradient(145deg, #3498db, #2980b9); font-size: 14px; color: #fff; transition: all 0.3s ease; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); border: none; cursor: pointer;">
-                        <i class="fas fa-dollar-sign" style="margin-right: 10px;"></i>Debit Voucher  <i class="fas fa-caret-down" style="margin-left: 5px;"></i>
-                    </button>
-                    <div id="debitDropdown" class="dropdown-content" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
-                        <a href="./productEntryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Product Entry</a>
+                    <div id="creditDropdown" class="dropdown-content" style="display: none; position: absolute; z-index: 999; background-color: #f9f9f9; min-width: 145px; margin-top:5px !important; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); border-radius: 10px;">
                         <a href="./generalentryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">General Entry</a>
+                        <a href="./productEntryform.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Product Entry</a>
                     </div>
                 </div>
             </div>
@@ -127,7 +133,7 @@
             }
 
             window.onclick = function(event) {
-                if (!event.target.matches('.dropdown button')) {
+                if (!event.target.matches('.dropdown button') && !event.target.closest('.user-profile-container')) {
                     var dropdowns = document.getElementsByClassName("dropdown-content");
                     for (var i = 0; i < dropdowns.length; i++) {
                         var openDropdown = dropdowns[i];
@@ -137,6 +143,11 @@
                     }
                 }
             }
+
+            document.querySelector('.profile-header').addEventListener('click', function() {
+                var dropdown = this.nextElementSibling.querySelector('.dropdown-content');
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            });
         </script>
         <style>
             button:hover {
