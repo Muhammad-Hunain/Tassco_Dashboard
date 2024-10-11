@@ -128,13 +128,13 @@
 <!-- Sidebar -->
 <div class="sidebar" id="sidebar">
     <ul>
-        <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
-        <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
-        <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
-              <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
-        <li><a href="./voucher.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
-       <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
-         <li><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+        <li onclick="window.location.href='./index.html'"><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+        <li onclick="window.location.href='./accounttable.html'"><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+        <li onclick="window.location.href='./producttable.html'"><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+        <li onclick="window.location.href='./accountLedger.html'"><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+        <li onclick="window.location.href='./voucher.html'"><a href="./voucher.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+        <li onclick="window.location.href='./Reports.html'"><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+        <li onclick="window.location.href='./sigIn.html'"><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
     </ul>
 </div>
 
@@ -152,7 +152,7 @@
                     </div>
                     <div class="form-group" style="margin-left: 20px;">
                         
-                        <label for="PackingType">Packing Type</label>
+                        <label for="PackingType">Wieght Type</label>
                         <select id="PackingType" name="PackingType" class="form-input">
                             <option value="">Select Packing Type</option>
                             <option value="kg">Kilogram</option>
@@ -163,8 +163,18 @@
                 </div>
                 
                 <div class="form-row">
+                   
+                    <div class="form-group" >
+                        <label for="typeOfQty">Type of Quantity</label>
+                        <select id="typeOfQty" name="typeOfQty" class="form-input">
+                            <option value="">Select Type of QTY</option>
+                            <option value="piece">Piece</option>
+                            <option value="box">Box</option>
+                            <option value="pack">Pack</option>
+                        </select>
+                    </div>
                     <div class="form-group">
-                        <label for="qty">QTY</label>
+                        <label for="qty">Quantity</label>
                         <input type="number" id="qty" name="qty" placeholder="Enter Quantity" class="form-input">
                     </div>
                     <div class="form-group" style="margin-left: 20px;">
@@ -173,30 +183,7 @@
                     </div>
                 </div>
                 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="discount">Discount</label>
-                        <select id="discount" name="discount" class="form-input">
-                            <option value="">Select Discount</option>
-                            <option value="0">0%</option>
-                            <option value="5">5%</option>
-                            <option value="10">10%</option>
-                            <option value="15">15%</option>
-                            <option value="20">20%</option>
-                        </select>
-                    </div>
-                    <div class="form-group" style="margin-left: 20px;">
-                        <label for="typeOfQty">Type of QTY</label>
-                        <select id="typeOfQty" name="typeOfQty" class="form-input">
-                            <option value="">Select Type of QTY</option>
-                            <option value="piece">Piece</option>
-                            <option value="box">Box</option>
-                            <option value="pack">Pack</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- <div class="form-group">
+                    <!-- <div class="form-group">
                     <label for="retailPrice">Retail Price</label>
                     <input type="number" id="retailPrice" name="retailPrice" placeholder="Enter Retail Price" class="form-input">
                 </div> -->

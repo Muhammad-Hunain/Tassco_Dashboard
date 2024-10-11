@@ -65,39 +65,10 @@
     <!-- Main content -->
     <div class="main-content" id="mainContent">
 
+        
+
         <h1 class="page-title" style="text-align: center; margin-left:10px;">General Entry</h1>
 
-        <div class="form-container" style="padding: 20px; margin: 20px;">`
-            <div class="left-side">
-                <div class="form-group">
-                    <label for="voucherNumber">Voucher Number:</label>
-                    <input type="text" id="voucherNumber" name="voucherNumber" required>
-                </div>
-            </div>
-            <div class="right-side">
-                <div class="form-group">
-                    <label for="date">Date:</label>
-                    <input type="date" id="date" name="date" class="small-input">
-                </div>
-                <div class="form-group">
-                    <label for="invoiceNumber">Invoice Number:</label>
-                    <input type="text" id="invoiceNumber" name="invoiceNumber" class="small-input">
-                </div>
-                <div class="form-group">
-                    <label for="demandId">Demand ID:</label>
-                    <input type="text" id="demandId" name="demandId" class="small-input">
-                </div>
-                <div class="form-group">
-                    <label for="cashBookId">Cash Book ID:</label>
-                    <input type="text" id="cashBookId" name="cashBookId" class="small-input">
-                </div>
-                <div class="form-group">`
-                    <label for="gatePass">Gate Pass:</label>
-                    <input type="text" id="gatePass" name="gatePass" class="small-input">
-                </div>
-
-            </div>
-        </div>
 
         <div class="form-group" style="margin-top: 20px;  display: flex; justify-content: center;">
             <div style="width: 69%;">
@@ -117,7 +88,7 @@
             </div>
 
 
-            <div style="width: 25%; margin-left: 2%;">
+            <div style="width: 25%; margin-left: 1%;">
                 <label for="amount" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount:</label>
                 <input type="number" id="amount" name="amount"
                     style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
@@ -127,17 +98,169 @@
 
 
 
-          <div class="form-group" style="margin-top: 20px; display: flex; justify-content: center; gap: 2%;">
-              <div style="width: 67%;">
-                  <label for="description" style="display: block; margin-bottom: 5px; font-weight: bold;">Description:</label>
-                  <textarea id="description" name="description" style="width: 100%; height: 200px; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease; resize: vertical;"></textarea>
-              </div>
 
-              <div style="width: 25%; margin-left: 2%;">
-                  <label for="amount" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount:</label>
-                  <textarea id="amount" name="amount" style="width: 100%; height: 200px; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease; resize: vertical;"></textarea>
-              </div>
-          </div>
+
+
+        <div class="container-form" style=" margin: 20px auto !important; width:95%; border: 1px solid #ccc !important; border-radius:20px; margin-top:20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;""> 
+    
+
+
+        <div class="form-group" style="margin: 20px auto !important; width:95%; display: flex; justify-content: space-between;">
+            <div style="width: 25%;">
+                <label for="voucherNumber" style="display: block; margin-bottom: 5px; font-weight: bold;">Voucher Number:</label>
+                <input type="text" id="voucherNumber" name="voucherNumber"
+                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+            <div style="width: 25%;">
+                <label for="date" style="display: block; margin-bottom: 5px; font-weight: bold;">Date:</label>
+                <input type="date" id="date" name="date"
+                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+        </div>
+
+        <div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: flex-end; flex-wrap: wrap;">
+            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
+                <label for="invoiceNo" style="display: block; margin-bottom: 5px; font-weight: bold;">Invoice No:</label>
+                <input type="text" id="invoiceNo" name="invoiceNo"
+                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
+                <label for="demandForm" style="display: block; margin-bottom: 5px; font-weight: bold;">Demand Form:</label>
+                <input type="text" id="demandForm" name="demandForm"
+                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
+                <label for="gatePassId" style="display: block; margin-bottom: 5px; font-weight: bold;">Gate Pass ID:</label>
+                <input type="text" id="gatePassId" name="gatePassId"
+                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+            <div style="width: 30%; margin-left: 5%;">
+                <label for="cashBookId" style="display: block; margin-bottom: 5px; font-weight: bold;">Cash Book ID:</label>
+                <input type="text" id="cashBookId" name="cashBookId"
+                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="width: 68%;">
+        <label for="description1" style="display: block; margin-bottom: 5px; font-weight: bold;">Description:</label>
+        <input type="text" id="description1" name="description1"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 28%;">
+        <label for="amount1" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount:</label>
+        <input type="number" id="amount1" name="amount1"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+</div>
+
+<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="width: 68%;">
+        
+        <input type="text" id="description2" name="description2"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 28%;">
+        
+        <input type="number" id="amount2" name="amount2"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+</div>
+
+<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="width: 68%;">
+        
+        <input type="text" id="description3" name="description3"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 28%;">
+       
+        <input type="number" id="amount3" name="amount3"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+</div>
+
+<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="width: 68%;">
+        
+        <input type="text" id="description4" name="description4"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 28%;">
+       
+        <input type="number" id="amount4" name="amount4"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+</div>
+
+<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="width: 68%;">
+       
+        <input type="text" id="description5" name="description5"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 28%;">
+       
+        <input type="number" id="amount5" name="amount5"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+</div>
+
+
+
+<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="width: 68%;">
+        <input type="text" value="Total" readonly
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 28%;">
+        <input type="number" id="totalAmount" name="totalAmount" readonly
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+</div>
+
+
+
+
+<div class="form-group" style="margin: 20px auto; width:95%; display: flex;  flex-wrap: wrap;">
+    <div style="width: 23%;">
+        <input type="text" id="bank" name="bank" placeholder="Bank"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 23%; margin-left:2%;" >
+        <input type="date" id="date" name="date"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+
+    <div style="width: 23%; margin-left:2%;">
+        <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+    <div style="width: 23%; margin-left:2%;">
+        <input type="text" id="chequeNo" name="chequeNo" placeholder="Cheque No."
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+    </div>
+</div>
+
+
+<!-- <div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="width: 100%;">
+        <select id="paymentMethod" name="paymentMethod"
+            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+            <option value="">Select Payment Method</option>
+            <option value="online">Online</option>
+            <option value="cheque">Cheque</option>
+        </select>
+    </div>
+</div> -->
+
 
 
 
