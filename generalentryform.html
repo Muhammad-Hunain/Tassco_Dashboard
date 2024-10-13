@@ -7,9 +7,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity32="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
 
     </style>
@@ -17,10 +16,10 @@
 
 <body>
     <!-- Topbar -->
-    <div class="topbar">
-        <div class="topbar-left">
-            <a class="toggle-btn" onclick="toggleSidebar()">
-                <i class="fas fa-bars"></i>
+    <div class="topbar" style="  height: 80px;">
+        <div class="topbar-left py-5">
+            <a class="toggle-btn" onclick="toggleSidebar()" >
+                <i class="fas fa-bars" style="color: #00AFF0 !important;"></i>
             </a>
             <div class="logo">
                 <img src="./TC-Logo.png" alt="Logo">
@@ -46,357 +45,188 @@
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span
-                        class="sidebar-text">Dashboard</span></a></li>
-            <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i>
-                    <span class="sidebar-text">Account</span></a></li>
-            <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i
-                        class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
-            <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i
-                        class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
-            <li><a href="./voucher.html" style="text-decoration: none; color: #000;"><i
-                        class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
-            <li><a href="./Reports.html" style="text-decoration: none; color: #000;"><i
-                        class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
-            <li><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i
-                        class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+            <li onclick="window.location.href='./index.html'"><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+            <li onclick="window.location.href='./accounttable.html'"><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+            <li onclick="window.location.href='./producttable.html'"><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+            <li onclick="window.location.href='./accountLedger.html'"><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+            <li onclick="window.location.href='./voucher.html'"><a href="./voucher.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+            <li onclick="window.location.href='./discount.html'"><a href="./discount.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Discount</span></a></li>
+            <li onclick="window.location.href='./Reports.html'"><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+            <li onclick="window.location.href='./sigIn.html'"><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
         </ul>
     </div>
     <!-- Main content -->
-    <div class="main-content" id="mainContent">
-
-        
-
-        <h1 class="page-title" style="text-align: center; margin-left:10px;">General Entry</h1>
-
-
-        <div class="form-group" style="margin-top: 20px;  display: flex; justify-content: center;">
-            <div style="width: 69%;">
-                <label for="accountTitle" style="display: block; margin-bottom: 5px; font-weight: bold;">Account
-                    Title:</label>
-                <select id="accountTitle" name="accountTitle"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); appearance: none; -webkit-appearance: none; -moz-appearance: none;  background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-                    <option value="">Select Account Title</option>
-                    <option value="cash">Cash</option>
-                    <option value="bank">Bank</option>
-                    <option value="accounts_receivable">Accounts Receivable</option>
-                    <option value="accounts_payable">Accounts Payable</option>
-                    <option value="inventory">Inventory</option>
-                    <option value="revenue">Revenue</option>
-                    <option value="expenses">Expenses</option>
-                </select>
-            </div>
-
-
-            <div style="width: 25%; margin-left: 1%;">
-                <label for="amount" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount:</label>
-                <input type="number" id="amount" name="amount"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>            
-        </div>
-
-
-
-
-
-
-
-        <div class="container-form" style=" margin: 20px auto !important; width:95%; border: 1px solid #ccc !important; border-radius:20px; margin-top:20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;""> 
     
+    <div class="main-content" id="mainContent">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <main class="col-md-12 col-lg-12 px-4 " id="mainContent">
+                <h1 class="text-center mb-4  ">General Entry</h1>
+                <form>
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <label for="accountTitle" class="form-label">Account Title:</label>
+                            <select id="accountTitle" name="accountTitle" class="form-select" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                <option value="">Select Account Title</option>
+                                <option value="cash">Cash</option>
+                                <option value="bank">Bank</option>
+                                <option value="accounts_receivable">Accounts Receivable</option>
+                                <option value="accounts_payable">Accounts Payable</option>
+                                <option value="inventory">Inventory</option>
+                                <option value="revenue">Revenue</option>
+                                <option value="expenses">Expenses</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="amount" class="form-label">Amount:</label>
+                            <input type="number" id="amount" name="amount" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                    </div>
 
+                    <div class="card mb-3" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="voucherNumber" class="form-label">Voucher Number:</label>
+                                    <input type="text" id="voucherNumber" name="voucherNumber" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="date" class="form-label">Date:</label>
+                                    <input type="date" id="date" name="date" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="invoiceNo" class="form-label">Invoice No:</label>
+                                    <input type="text" id="invoiceNo" name="invoiceNo" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="demandForm" class="form-label">Demand Form:</label>
+                                    <input type="text" id="demandForm" name="demandForm" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="gatePassId" class="form-label">Gate Pass ID:</label>
+                                    <input type="text" id="gatePassId" name="gatePassId" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="cashBookId" class="form-label">Cash Book ID:</label>
+                                    <input type="text" id="cashBookId" name="cashBookId" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="form-group" style="margin: 20px auto !important; width:95%; display: flex; justify-content: space-between;">
-            <div style="width: 25%;">
-                <label for="voucherNumber" style="display: block; margin-bottom: 5px; font-weight: bold;">Voucher Number:</label>
-                <input type="text" id="voucherNumber" name="voucherNumber"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 25%;">
-                <label for="date" style="display: block; margin-bottom: 5px; font-weight: bold;">Date:</label>
-                <input type="date" id="date" name="date"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-        </div>
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <label for="description1" class="form-label">Description:</label>
+                            <input type="text" id="description1" name="description1" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="amount1" class="form-label">Amount:</label>
+                            <input type="number" id="amount1" name="amount1" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                    </div>
 
-        <div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: flex-end; flex-wrap: wrap;">
-            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
-                <label for="invoiceNo" style="display: block; margin-bottom: 5px; font-weight: bold;">Invoice No:</label>
-                <input type="text" id="invoiceNo" name="invoiceNo"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
-                <label for="demandForm" style="display: block; margin-bottom: 5px; font-weight: bold;">Demand Form:</label>
-                <input type="text" id="demandForm" name="demandForm"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
-                <label for="gatePassId" style="display: block; margin-bottom: 5px; font-weight: bold;">Gate Pass ID:</label>
-                <input type="text" id="gatePassId" name="gatePassId"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 30%; margin-left: 5%;">
-                <label for="cashBookId" style="display: block; margin-bottom: 5px; font-weight: bold;">Cash Book ID:</label>
-                <input type="text" id="cashBookId" name="cashBookId"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-        </div>
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <input type="text" id="description2" name="description2" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="amount2" name="amount2" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                    </div>
 
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <input type="text" id="description3" name="description3" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="amount3" name="amount3" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                    </div>
 
-    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <input type="text" id="description4" name="description4" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="amount4" name="amount4" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                    </div>
 
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <input type="text" id="description5" name="description5" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="amount5" name="amount5" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                    </div>
 
+                    <div class="row mb-3">
+                        <div class="col-md-9">
+                            <label for="totalAmount" class="form-label">Total:</label>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="totalAmount" name="totalAmount" readonly class="form-control">
+                        </div>
+                    </div>
 
+                    <div class="row mb-3">
+                        <div class="col-md-3 mb-3">
+                            <input type="text" id="bank" name="bank" placeholder="Bank" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input type="date" id="bankDate" name="bankDate" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
+                        </div>
+                        
+                        
+                        </div>  
+                        <div class="row mb-3">
+                        <div class="col-md-3 mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" id="chequeCheckbox" class="form-check-input">
+                                <label class="form-check-label" for="chequeCheckbox">Cheque</label>
+                            </div>
+                            <input type="text" id="chequeNo" name="chequeNo" placeholder="Cheque No." class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;" disabled>
+                        </div>
+                 
+                 
+                        <div class="col-md-3 mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" id="onlineCheckbox" class="form-check-input">
+                                <label class="form-check-label" for="onlineCheckbox">Online</label>
+                            </div>
+                            <input type="text" id="online" name="online" placeholder="Online" class="form-control" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;" disabled>
+                        </div>
 
+                        <script>
+                            document.getElementById('chequeCheckbox').addEventListener('change', function() {
+                                document.getElementById('chequeNo').disabled = !this.checked;
+                            });
 
-<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-    <div style="width: 68%;">
-        <label for="description1" style="display: block; margin-bottom: 5px; font-weight: bold;">Description:</label>
-        <input type="text" id="description1" name="description1"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 28%;">
-        <label for="amount1" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount:</label>
-        <input type="number" id="amount1" name="amount1"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-</div>
+                            document.getElementById('onlineCheckbox').addEventListener('change', function() {
+                                document.getElementById('online').disabled = !this.checked;
+                            });
+                        </script>
+                 
+                    </div>
 
-<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-    <div style="width: 68%;">
-        
-        <input type="text" id="description2" name="description2"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 28%;">
-        
-        <input type="number" id="amount2" name="amount2"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-</div>
-
-<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-    <div style="width: 68%;">
-        
-        <input type="text" id="description3" name="description3"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 28%;">
-       
-        <input type="number" id="amount3" name="amount3"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-</div>
-
-<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-    <div style="width: 68%;">
-        
-        <input type="text" id="description4" name="description4"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 28%;">
-       
-        <input type="number" id="amount4" name="amount4"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-</div>
-
-<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-    <div style="width: 68%;">
-       
-        <input type="text" id="description5" name="description5"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 28%;">
-       
-        <input type="number" id="amount5" name="amount5"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-</div>
-
-
-
-<div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-    <div style="width: 68%;">
-        <input type="text" value="Total" readonly
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 28%;">
-        <input type="number" id="totalAmount" name="totalAmount" readonly
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-</div>
-
-
-
-
-<div class="form-group" style="margin: 20px auto; width:95%; display: flex;  flex-wrap: wrap;">
-    <div style="width: 23%;">
-        <input type="text" id="bank" name="bank" placeholder="Bank"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 23%; margin-left:2%;" >
-        <input type="date" id="date" name="date"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-
-    <div style="width: 23%; margin-left:2%;">
-        <input type="text" id="accountNumber" name="accountNumber" placeholder="Account Number"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-    <div style="width: 23%; margin-left:2%;">
-        <input type="text" id="chequeNo" name="chequeNo" placeholder="Cheque No."
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-    </div>
-</div>
-
-
-<!-- <div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-    <div style="width: 100%;">
-        <select id="paymentMethod" name="paymentMethod"
-            style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            <option value="">Select Payment Method</option>
-            <option value="online">Online</option>
-            <option value="cheque">Cheque</option>
-        </select>
-    </div>
-</div> -->
-
-
-
-
-        <div class="form-group" style="display: flex; justify-content:flex-end ; margin-top: 20px;">
-            <button id="saveButton"
-                style="padding: 12px 24px; background-color: #00AFF0; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;">
-                Save
-            </button>
-        </div>
-
-    </div>
+                    
+                                        <div class="row mb-3">
+                                            <div class="col-md-12 text-end">
+                                                <button type="submit" class="btn btn-primary" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-size: 16px; transition: all 0.3s ease;">Save</button>
+                                            </div>
+                                        </div>
+                    
 
 
 
-    </table>
-    </div>
-    </div>
-    </div>
 
-    <style>
-        .form-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            background-color: #f0f8ff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .left-side {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .right-side {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .left-side .form-group {
-            justify-content: flex-start;
-        }
-
-        .right-side .form-group {
-            width: 100%;
-        }
-
-        .form-group label {
-            margin-bottom: 5px;
-            font-size: 14px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        .form-group input {
-            width: 100%;
-            max-width: 100%;
-            padding: 10px;
-            border: 1px solid #bbd8ff;
-            border-radius: 6px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            background-color: #ffffff;
-        }
-
-        .form-group input:focus {
-            border-color: #4a90e2;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
-        }
-
-        .form-group input[type="date"],
-        .form-group input[type="number"] {
-            padding: 9px 10px;
-        }
-
-        .table-responsive {
-            overflow-x: auto;
-        }
-
-        #itemTable {
-            min-width: 600px;
-        }
-
-        #itemTable th,
-        #itemTable td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        #itemTable input {
-            width: 100%;
-            padding: 5px;
-        }
-
-        @media (min-width: 768px) {
-            .left-side {
-                width: 28%;
-                margin-bottom: 0;
-            }
-
-            .right-side {
-                width: 68%;
-            }
-
-            .right-side .form-group {
-                width: 48%;
-            }
-
-            .form-group {
-                flex-direction: row;
-                align-items: center;
-            }
-
-            .form-group label {
-                margin-right: 10px;
-                margin-bottom: 0;
-            }
-        }
-    </style>
-
-
-
-    </div>
-
+                </div>
 
 
     <script>

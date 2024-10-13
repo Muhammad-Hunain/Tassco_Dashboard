@@ -6,17 +6,26 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity32="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-       
+       input, select, textarea {
+           border-radius: 8px !important;
+           border: 1px solid #ccc !important;
+           box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+           background-color: #f9f9f9 !important;
+           font-size: 16px !important;
+           transition: all 0.3s ease !important;
+       }
     </style>
 </head>
 <body>
     <!-- Topbar -->
-    <div class="topbar">
+    <div class="topbar" style="  height: 80px;">
         <div class="topbar-left">
             <a class="toggle-btn" onclick="toggleSidebar()" >
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" style="color: #00AFF0 !important;"></i>
             </a>
             <div class="logo">
                 <img src="./TC-Logo.png" alt="Logo">
@@ -44,296 +53,182 @@
 
     <div class="sidebar" id="sidebar">
         <ul>
-            <li><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
-            <li><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
-            <li><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
-                  <li><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
-            <li><a href="./voucher.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
-            <li><a href="./commingsoon.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
-             <li><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
+            <li onclick="window.location.href='./index.html'"><a href="./index.html" style="text-decoration: none; color: #000;"><i class="fas fa-home"></i> <span class="sidebar-text">Dashboard</span></a></li>
+            <li onclick="window.location.href='./accounttable.html'"><a href="./accounttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-users"></i> <span class="sidebar-text">Account</span></a></li>
+            <li onclick="window.location.href='./producttable.html'"><a href="./producttable.html" style="text-decoration: none; color: #000;"><i class="fas fa-chart-line"></i> <span class="sidebar-text">Product</span></a></li>
+            <li onclick="window.location.href='./accountLedger.html'"><a href="./accountLedger.html" style="text-decoration: none; color: #000;"><i class="fas fa-shopping-cart"></i> <span class="sidebar-text">General Ledger</span></a></li>
+            <li onclick="window.location.href='./voucher.html'"><a href="./voucher.html" style="text-decoration: none; color: #000;"><i class="fas fa-cash-register"></i> <span class="sidebar-text">Voucher</span></a></li>
+            <li onclick="window.location.href='./discount.html'"><a href="./discount.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Discount</span></a></li>
+            <li onclick="window.location.href='./Reports.html'"><a href="./Reports.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Reports</span></a></li>
+            <li onclick="window.location.href='./sigIn.html'"><a href="./sigIn.html" style="text-decoration: none; color: #000;"><i class="fas fa-file-invoice-dollar"></i> <span class="sidebar-text">Logout</span></a></li>
         </ul>
     </div>
       <!-- Main content -->
       <div class="main-content" id="mainContent">
-                          
-         
-        <div class="form-group" style="margin-top: 20px;  display: flex; justify-content: center;">
-            <div style="width: 69%;">
-                <label for="accountTitle" style="display: block; margin-bottom: 5px; font-weight: bold;">Account
-                    Title:</label>
-                <select id="accountTitle" name="accountTitle"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); appearance: none; -webkit-appearance: none; -moz-appearance: none;  background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-                    <option value="">Select Account Title</option>
-                    <option value="cash">Cash</option>
-                    <option value="bank">Bank</option>
-                    <option value="accounts_receivable">Accounts Receivable</option>
-                    <option value="accounts_payable">Accounts Payable</option>
-                    <option value="inventory">Inventory</option>
-                    <option value="revenue">Revenue</option>
-                    <option value="expenses">Expenses</option>
-                </select>
-            </div>
+          <div class="container-fluid mt-4">
+            <h1 class="text-center mb-4 mt-5 ">Product Entry</h1>
+              <div class="row">
+                  <div class="col-lg-9 col-md-8">
+                      <div class="form-group">
+                          <label for="accountTitle" class="form-label fw-bold">Account Title:</label>
+                          <select id="accountTitle" name="accountTitle" class="form-select">
+                              <option value="">Select Account Title</option>
+                              <option value="cash">Cash</option>
+                              <option value="bank">Bank</option>
+                              <option value="accounts_receivable">Accounts Receivable</option>
+                              <option value="accounts_payable">Accounts Payable</option>
+                              <option value="inventory">Inventory</option>
+                              <option value="revenue">Revenue</option>
+                              <option value="expenses">Expenses</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4">
+                      <div class="form-group">
+                          <label for="amount" class="form-label fw-bold">Amount:</label>
+                          <input type="number" id="amount" name="amount" class="form-control">
+                      </div>
+                  </div>
+              </div>
 
+              <div class="card mt-4" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                  <div class="card-body" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;"">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="voucherNumber" class="form-label fw-bold">Voucher Number:</label>
+                                  <input type="text" id="voucherNumber" name="voucherNumber" class="form-control">
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="date" class="form-label fw-bold">Date:</label>
+                                  <input type="date" id="date" name="date" class="form-control">
+                              </div>
+                          </div>
+                      </div>
 
-            <div style="width: 25%; margin-left: 1%;">
-                <label for="amount" style="display: block; margin-bottom: 5px; font-weight: bold;">Amount:</label>
-                <input type="number" id="amount" name="amount"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>            
-        </div>
+                      <div class="row mt-3" >
+                          <div class="col-md-3" >
+                              <div class="form-group">
+                                  <label for="invoiceNo" class="form-label fw-bold">Invoice No:</label>
+                                  <input type="text" id="invoiceNo" name="invoiceNo" class="form-control" >
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                              <div class="form-group">
+                                  <label for="demandForm" class="form-label fw-bold">Demand Form:</label>
+                                  <input type="text" id="demandForm" name="demandForm" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                              <div class="form-group">
+                                  <label for="gatePassId" class="form-label fw-bold">Gate Pass ID:</label>
+                                  <input type="text" id="gatePassId" name="gatePassId" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                              </div>
+                          </div>
+                          <div class="col-md-3">
+                              <div class="form-group">
+                                  <label for="cashBookId" class="form-label fw-bold">Cash Book ID:</label>
+                                  <input type="text" id="cashBookId" name="cashBookId" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
+              <div class="mt-4">
+                  <button id="addRow" class="btn btn-p mb-3" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #00AFF0; font-size: 16px; transition: all 0.3s ease; color:#fff;">Add Row</button>
+                  <div class="table-responsive">
+                      <table id="itemTable" class="table table-bordered" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" >
+                          <thead>
+                              <tr>
+                                  <th>S.No</th>
+                                  <th>Item Name</th>
+                                  <th>Packing (kg or litre)</th>
+                                  <th>Quality</th>
+                                  <th>R.P</th>
+                                  <th>Discount</th>
+                                  <th>Amount</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <!-- Rows will be added here dynamically -->
+                          </tbody>
+                          <tfoot>
+                              <tr>
+                                  <td colspan="6" class="text-end fw-bold">Total:</td>
+                                  <td id="totalAmount" class="fw-bold"></td>
+                              </tr>
+                          </tfoot>
+                      </table>
+                  </div>
 
+                  <div class="row mt-4">
+                      <div class="col-md-3 mb-3">
+                          <input type="text" id="Sales Invoice" name="Sales Invoice" placeholder="Sales Invoice" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                      </div>
+                      <div class="col-md-3 mb-3">
+                          <input type="text" id="Customer Name" name="Customer Name" placeholder="Customer Name" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                      </div>
+                      <div class="col-md-3 mb-3">
+                          <input type="text" id="city" name="city" placeholder="City Name" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                      </div>
+                      <div class="col-md-3 mb-3">
+                          <input type="text" id="tyoe of sale" name="tyoe of sale" placeholder="Type of sale" class="form-control" style="border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                      </div>
+                  </div>
 
-
-
-
-
-        <div class="container-form" style=" margin: 20px auto !important; width:95%; border: 1px solid #ccc !important; border-radius:20px; margin-top:20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;""> 
-    
-
-
-        <div class="form-group" style="margin: 20px auto !important; width:95%; display: flex; justify-content: space-between;">
-            <div style="width: 25%;">
-                <label for="voucherNumber" style="display: block; margin-bottom: 5px; font-weight: bold;">Voucher Number:</label>
-                <input type="text" id="voucherNumber" name="voucherNumber"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 25%;">
-                <label for="date" style="display: block; margin-bottom: 5px; font-weight: bold;">Date:</label>
-                <input type="date" id="date" name="date"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-        </div>
-
-        <div class="form-group" style="margin: 20px auto; width:95%; display: flex; justify-content: flex-end; flex-wrap: wrap;">
-            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
-                <label for="invoiceNo" style="display: block; margin-bottom: 5px; font-weight: bold;">Invoice No:</label>
-                <input type="text" id="invoiceNo" name="invoiceNo"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
-                <label for="demandForm" style="display: block; margin-bottom: 5px; font-weight: bold;">Demand Form:</label>
-                <input type="text" id="demandForm" name="demandForm"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 30%; margin-bottom: 20px; margin-left: 5%;">
-                <label for="gatePassId" style="display: block; margin-bottom: 5px; font-weight: bold;">Gate Pass ID:</label>
-                <input type="text" id="gatePassId" name="gatePassId"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-            <div style="width: 30%; margin-left: 5%;">
-                <label for="cashBookId" style="display: block; margin-bottom: 5px; font-weight: bold;">Cash Book ID:</label>
-                <input type="text" id="cashBookId" name="cashBookId"
-                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-            </div>
-        </div>
-
-
-    </div>
-                          
-                                  <div class="form-group" style="margin: 20px; display: flex; justify-content: center;">
-                                      <div style="width: 100%;">
-                                          <button id="addRow" style="margin-bottom: 30px; margin-top:10px;  margin-left: 15px; padding: 10px 20px; background-color: #00AFF0; color: white; border: none; border-radius: 4px; cursor: pointer;">Add Row</button>
-                                          <div class="table-responsive">
-                                              <table id="itemTable" style="  margin-left: 5px;  width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden;">
-                                                  <thead>
-                                                      <tr>
-                                                          <th>S.No</th>
-                                                          <th>Item Name</th>
-                                                          <th>Packing (kg or litre)</th>
-                                                          <th>Quality</th>
-                                                          <th>R.P</th>
-                                                          <th>Discount</th>
-                                                          <th>Amount</th>
-                                                      </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                      <!-- Rows will be added here dynamically -->
-                                                  </tbody>
-                                                  <tfoot>
-                                                      <tr>
-                                                          <td colspan="6" style="text-align: right; font-weight: bold;">Total:</td>
-                                                          <td id="totalAmount" style="font-weight: bold;"></td>
-                                                      </tr>
-                                                  </tfoot>
-                                              </table>
-                                          </div>
-
-
-
-                                          <div class="form-group" style="margin: 20px auto; width:95%; display: flex;  flex-wrap: wrap;">
-                                            <div style="width: 23%;">
-                                                <input type="text" id="Sales Invoice" name="Sales Invoice" placeholder="Sales Invoice"
-                                                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-                                            </div>
-                                            <div style="width: 23%; margin-left:2%;" >
-                                                <input type="text" id="Customer Name" name="Customer Name"
-                                                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-                                            </div>
-                                        
-                                            <div style="width: 23%; margin-left:2%;">
-                                                <input type="text" id="city" name="city" placeholder="City Name"
-                                                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-                                            </div>
-                                            <div style="width: 23%; margin-left:2%;">
-                                                <input type="text" id="tyoe of sale" name="tyoe of sale" placeholder="type of sale"
-                                                    style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #f9f9f9; font-size: 16px; transition: all 0.3s ease;">
-                                            </div>
-                                        </div>
-                                        
-
-
-
-
-
-                                          <button id="saveButton" style="margin-top: 20px; margin-left: auto; margin-right: 15px; padding: 10px 20px; background-color: #00AFF0; color: white; border: none; border-radius: 4px; cursor: pointer; display: block;">Save</button>
-                                      </div>
-                                  </div>
-  <script>
-      let rowCount = 0;
-
-      function addRow() {
-          rowCount++;
-          const tbody = document.querySelector("#itemTable tbody");
-          const newRow = document.createElement("tr");
-          newRow.innerHTML = `
-              <td>${rowCount}</td>
-              <td><input type="text" name="itemName_${rowCount}" style="width: 100%;"></td>
-              <td><input type="text" name="packing_${rowCount}" style="width: 100%;"></td>
-              <td><input type="text" name="quality_${rowCount}" style="width: 100%;"></td>
-              <td><input type="number" name="rp_${rowCount}" style="width: 100%;" oninput="calculateAmount(${rowCount})"></td>
-              <td><input type="number" name="discount_${rowCount}" style="width: 100%;" oninput="calculateAmount(${rowCount})"></td>
-              <td><input type="number" name="amount_${rowCount}" style="width: 100%;" readonly></td>
-          `;
-          tbody.appendChild(newRow);
-          calculateTotal();
-      }
-
-      function calculateAmount(row) {
-          const rp = parseFloat(document.querySelector(`input[name="rp_${row}"]`).value) || 0;
-          const discount = parseFloat(document.querySelector(`input[name="discount_${row}"]`).value) || 0;
-          const amount = rp - discount;
-          document.querySelector(`input[name="amount_${row}"]`).value = amount.toFixed(2);
-          calculateTotal();
-      }
-
-      function calculateTotal() {
-          const amounts = document.querySelectorAll('input[name^="amount_"]');
-          let total = 0;
-          amounts.forEach(input => {
-              total += parseFloat(input.value) || 0;
-          });
-          document.getElementById('totalAmount').textContent = total.toFixed(2);
-      }
-
-      document.getElementById("addRow").addEventListener("click", addRow);
-
-      // Add an initial row
-      addRow();
-  </script>
-
-  <style>
-    
-      .form-container {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          margin-bottom: 20px;
-          background-color: #f0f8ff;
-          padding: 25px;
-          border-radius: 12px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .left-side {
-          width: 100%;
-          margin-bottom: 20px;
-      }
-      .right-side {
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-      }
-      .form-group {
-          margin-bottom: 15px;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-      }
-      .left-side .form-group {
-          justify-content: flex-start;
-      }
-      .right-side .form-group {
-          width: 100%;
-      }
-      .form-group label {
-          margin-bottom: 5px;
-          font-size: 14px;
-          color: #333;
-          font-weight: 600;
-      }
-      .form-group input {
-          width: 100%;
-          max-width: 100%;
-          padding: 10px;
-          border: 1px solid #bbd8ff;
-          border-radius: 6px;
-          font-size: 14px;
-          transition: all 0.3s ease;
-          background-color: #ffffff;
-      }
-      .form-group input:focus {
-          border-color: #4a90e2;
-          outline: none;
-          box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.25);
-      }
-      .form-group input[type="date"],
-      .form-group input[type="number"] {
-          padding: 9px 10px;
-      }
-      .table-responsive {
-          overflow-x: auto;
-      }
-      #itemTable {
-          min-width: 600px;
-      }
-      #itemTable th, #itemTable td {
-          padding: 10px;
-          text-align: left;
-      }
-      #itemTable input {
-          width: 100%;
-          padding: 5px;
-      }
-
-      @media (min-width: 768px) {
-          .left-side {
-              width: 28%;
-              margin-bottom: 0;
-          }
-          .right-side {
-              width: 68%;
-          }
-          .right-side .form-group {
-              width: 48%;
-          }
-          .form-group {
-              flex-direction: row;
-              align-items: center;
-          }
-          .form-group label {
-              margin-right: 10px;
-              margin-bottom: 0;
-          }
-      }
-  </style>
-
-
-    
+                  <div class="text-end mt-4">
+                      <button id="saveButton" class="btn btn-p" style="border-radius: 5px; border-radius: 8px; border: 1px solid #ccc; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #00AFF0; font-size: 16px; transition: all 0.3s ease; color:#fff;">Save</button>
+                  </div>
+              </div>
+          </div>
       </div>
 
-    
+      <script>
+          let rowCount = 0;
 
+          function addRow() {
+              rowCount++;
+              const tbody = document.querySelector("#itemTable tbody");
+              const newRow = document.createElement("tr");
+              newRow.innerHTML = `
+                  <td>${rowCount}</td>
+                  <td><input type="text" name="itemName_${rowCount}" class="form-control"></td>
+                  <td><input type="text" name="packing_${rowCount}" class="form-control"></td>
+                  <td><input type="text" name="quality_${rowCount}" class="form-control"></td>
+                  <td><input type="number" name="rp_${rowCount}" class="form-control" oninput="calculateAmount(${rowCount})"></td>
+                  <td><input type="number" name="discount_${rowCount}" class="form-control" oninput="calculateAmount(${rowCount})"></td>
+                  <td><input type="number" name="amount_${rowCount}" class="form-control" readonly></td>
+              `;
+              tbody.appendChild(newRow);
+              calculateTotal();
+          }
+
+          function calculateAmount(row) {
+              const rp = parseFloat(document.querySelector(`input[name="rp_${row}"]`).value) || 0;
+              const discount = parseFloat(document.querySelector(`input[name="discount_${row}"]`).value) || 0;
+              const amount = rp - discount;
+              document.querySelector(`input[name="amount_${row}"]`).value = amount.toFixed(2);
+              calculateTotal();
+          }
+
+          function calculateTotal() {
+              const amounts = document.querySelectorAll('input[name^="amount_"]');
+              let total = 0;
+              amounts.forEach(input => {
+                  total += parseFloat(input.value) || 0;
+              });
+              document.getElementById('totalAmount').textContent = total.toFixed(2);
+          }
+
+          document.getElementById("addRow").addEventListener("click", addRow);
+
+          // Add an initial row
+          addRow();
+      </script>
+      </div>
     <script>
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
